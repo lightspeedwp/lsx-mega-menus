@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @author    LightSpeed
  * @license   GPL3
  * @link
- * @copyright 2016 LightSpeed
+ * @copyright 2018 LightSpeed
  */
 class LSXMM_Mega_Menu_Setting extends WP_Customize_Setting {
 

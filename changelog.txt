@@ -1,5 +1,8 @@
 ## Changelog
 
+### 1.2
+* Dev - Cleaned up Code
+
 ### 1.1.1
 * Fix - Compatibility with the new WordPress 4.8 media widgets.
 
