@@ -1,0 +1,23 @@
+@mixin customizer-mega-link-colour ($color: #418AD0, $hover: #F7AE00) {
+	&,
+	&:active,
+	&:visited {
+		color: $color;
+	}
+
+	&:hover,
+	&:hover:active,
+	&:focus {
+		color: $hover;
+	}
+}
+
+@mixin customizer-mega-nav-colours($hover: #418AD0, $dropdown-link: #FFF) {
+	.lsxmm-mega-menu {
+		color: $dropdown-link;
+
+		a:not(.btn) {
+			@include customizer-mega-link-colour($dropdown-link, $hover);
+		}
+	}
+}
