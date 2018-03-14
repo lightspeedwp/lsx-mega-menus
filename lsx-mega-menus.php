@@ -3,7 +3,7 @@
  * Plugin Name: LSX Mega Menus
  * Plugin URI:  https://www.lsdev.biz/product/lsx-mega-menus/
  * Description: Create custom, full-width dropdown menus that contain images, widgets and more that seamlessly tie into your LSX WordPress site.
- * Version:     1.1.1
+ * Version:     1.2
  * Author:      LightSpeed
  * Author URI:  https://www.lsdev.biz/
  * License:     GPL3
@@ -17,80 +17,6 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-/* ======================= The API Classes ========================= */
-
-if ( ! class_exists( 'LSX_API_Manager' ) ) {
-	require_once( 'classes/class-lsx-api-manager.php' );
-}
-
-/**
- * Runs once when the plugin is activated.
- */
-function lsx_mega_menus_activate_plugin() {
-	$lsx_to_password = get_option( 'lsx_api_instance', false );
-
-	if ( false === $lsx_to_password ) {
-		update_option( 'lsx_api_instance', LSX_API_Manager::generatePassword() );
-	}
-}
-register_activation_hook( __FILE__, 'lsx_mega_menus_activate_plugin' );
-
-/**
- *	Grabs the email and api key from the LSX Mega Menus Settings.
- */
-function lsx_mega_menus_options_pages_filter( $pages ) {
-	$pages[] = 'lsx-settings';
-	$pages[] = 'lsx-to-settings';
-	return $pages;
-}
-add_filter( 'lsx_api_manager_options_pages','lsx_mega_menus_options_pages_filter', 10, 1 );
-
-function lsx_mega_menus_api_admin_init() {
-	global $lsx_mega_menus_api_manager;
-
-	if ( function_exists( 'tour_operator' ) ) {
-		$options = get_option( '_lsx-to_settings', false );
-	} else {
-		$options = get_option( '_lsx_settings', false );
-
-		if ( false === $options ) {
-			$options = get_option( '_lsx_lsx-settings', false );
-		}
-	}
-
-	$data = array(
-		'api_key' => '',
-		'email'   => '',
-	);
-
-	if ( false !== $options && isset( $options['api'] ) ) {
-		if ( isset( $options['api']['lsx-mega-menus_api_key'] ) && '' !== $options['api']['lsx-mega-menus_api_key'] ) {
-			$data['api_key'] = $options['api']['lsx-mega-menus_api_key'];
-		}
-
-		if ( isset( $options['api']['lsx-mega-menus_email'] ) && '' !== $options['api']['lsx-mega-menus_email'] ) {
-			$data['email'] = $options['api']['lsx-mega-menus_email'];
-		}
-	}
-
-	$instance = get_option( 'lsx_api_instance', false );
-
-	if ( false === $instance ) {
-		$instance = LSX_API_Manager::generatePassword();
-	}
-
-	$api_array = array(
-		'product_id' => 'LSX Mega Menus',
-		'version'    => '1.1.1',
-		'instance'   => $instance,
-		'email'      => $data['email'],
-		'api_key'    => $data['api_key'],
-		'file'       => 'lsx-mega-menus.php',
-	);
-
-	$lsx_mega_menus_api_manager = new LSX_API_Manager( $api_array );
-}
-add_action( 'admin_init', 'lsx_mega_menus_api_admin_init' );
 
 /**
  * Required functions
