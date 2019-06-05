@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://bitbucket.org/feedmycode/lsx-mega-menus"
+    "url": "git+https://github.com/lightspeeddevelopment/lsx-mega-menus.git"
   },
   "keywords": [
     "lsx",
@@ -17,9 +17,9 @@
   "author": "LightSpeed",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://bitbucket.org/feedmycode/lsx-mega-menus/issues"
+    "url": "https://github.com/lightspeeddevelopment/lsx-mega-menus/issues"
   },
-  "homepage": "https://bitbucket.org/feedmycode/lsx-mega-menus#readme",
+  "homepage": "https://github.com/lightspeeddevelopment/lsx-mega-menus",
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
