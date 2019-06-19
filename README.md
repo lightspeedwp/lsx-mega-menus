@@ -1,48 +1,37 @@
-# LSX Mega Menus
+<p align="center"><a target="_blank" href="https://lsx.lsdev.biz/"><img width="100px;" src="https://lsx.lsdev.biz/wp-content/uploads/2019/03/Mega-Menu.svg" alt="LSX Mega Menus"></a>
+</p>
+<h1 align="center">LSX Mega Menus</h1>
 
-## Description
+<p align="center">
+    <a href="http://gulpjs.com/"><img src="https://img.shields.io/badge/built%20with-gulp.js-green.svg" alt="Built with gulp.js"></a> 
+    <a href="https://travis-ci.org/lightspeeddevelopment/lsx-banners"><img src="https://travis-ci.org/lightspeeddevelopment/lsx-mega-menus.svg?branch=master" alt="Build Status"></a>
+    <a href="https://lsx.lsdev.biz/"><img src="https://lsx.lsdev.biz/wp-content/uploads/2019/06/Designed-for-LSX-Theme-blue.png" alt="Made for LSX"></a>
+</p>
 
-Go from mundane to mega with the [LSX Mega Menus extension.](https://lsx.lsdev.biz/extensions/mega-menus/) Create beautiful full-width menu dropdowns that contain dynamic content such as images, icons, videos, and widget areas.It has a familiar drag and drop interface, and menu items that can easily be resized and reordered. It also allows you to preview before you publish
+Go from mundane to mega with the [LSX Mega Menus Extension](https://lsx.lsdev.biz/extensions/mega-menus/) extension. Create beautiful full-width menu dropdowns that contain dynamic content such as images, icons, videos, and widget areas.It has a familiar drag and drop interface, and menu items that can easily be resized and reordered. It also allows you to preview before you publish.
 
-### Works with the LSX Theme =
-We've also made a fantastic [theme](https://lsx.lsdev.biz/) that work well with the [LSX Mega Menus extension.](https://lsx.lsdev.biz/extensions/mega-menus/)
+## Works with the LSX Theme
+Our modern and lightweight [theme](https://lsx.lsdev.biz/) works perfectly with the Blog Customizer, improving internal linking, website SEO and user experience! 
 
-### Gutenberg Compatible =
-Have you updated to the new WordPress Gutenberg editor? We've got you covered! [The LSX Theme](https://lsx.lsdev.biz/) and all of its extensions have been optimised for the Gutenberg update. 
+## Gutenberg Compatible Plugin
+Have you updated to the new WordPress Gutenberg editor? We've got you covered! The LSX Mega Menu Plugin has been optimised for the Gutenberg update. Check out our [release post](https://lsx.lsdev.biz/lsx-blocks-available-on-wordpress-org/) on the update for more information.
 
-### It's free, and always will be. =
-We’re firm believers in open source - that’s why we’re releasing the LSX Mega Menus plugin for free, forever.
+## It's free, and always will be.
+We’re firm believers in open source - that’s why the [LSX Mega Menus](https://lsx.lsdev.biz/extensions/mega-menus/) is free, and that won't change. We are constantly maintaining and updating our extension so you have the latest and greatest abilities on your LSX Theme powered site. 
 
-### Support =
-We offer premium support for this plugin. Premium support that can be purchased via [lsdev.biz](https://www.lsdev.biz/services/support/).
+## LSX Mega Menus Documentation
 
-## Installation
+We have created extensive documentation on all of the LSX Mega Menus Plugin functionality. This means a hassle free installation and setup with no code requirements. Go to the [LSX Mega Menus Documentation](https://lsx.lsdev.biz/documentation/lsx-mega-menus/).
 
-You can also download and install the extension directly from the backend of your website
+## LSX Mega Menus Help & Support
 
-1. Login to the backend of your website.
-2. Navigate to the “Plugins” dashboard item.
-3. Select the “Add New” option on the plugins page.
-4. Search for “LSX Mega Menus” in the plugin search bar.
-5. Download and activate the plugin.
+We offer premium support for this plugin. Premium support that can be purchased [via our website](https://www.lsdev.biz/services/support/).
 
-## Frequently Asked Questions
+If you are experiencing issues with the LSX Mega Menus Plugin & have experience with Github, please log any bug issues you are having on the [LSX Mega Menus Github Issues](https://github.com/lightspeeddevelopment/lsx-mega-menus/issues/) page.
 
-### Where can I find LSX Mega Menus plugin documentation and user guides? =
-For help setting up and configuring the Mega Menus plugin please refer to our [user guide](https://www.lsdev.biz/documentation/lsx/mega-menus-extension/)
+## Contributing to the LSX Mega Menus Plugin
 
-### Where can I get support =
-For help with premium add-ons from LightSpeed, use [our contact page](https://www.lsdev.biz/contact-us/) to request a quote.
-
-### Will the LSX Mega Menus plugin work with my theme? =
-No; the LSX Projects plugin requires some styling and functionality only available for the [The LSX Theme](http://lsx.lsdev.biz). You need to install the [The LSX Theme](http://lsx.lsdev.biz) for this extension to work properly.
-
-### Where can I report bugs or contribute to the project? =
-Bugs can be reported on the [LSX Mega Menus GitHub repository](https://github.com/lightspeeddevelopment/lsx/issues).
-
-### The LSX Mega Menus plugin is awesome! Can I contribute? =
-Yes you can! Join in on our [GitHub repository](https://github.com/lightspeeddevelopment/lsx-mega-menus) :)
-
+If you're a developer who's spotted a bug issue and have a fix, or simply have functionality you think would extend our core theme, we are always happy to accept your contribution! Visit the [LSX Mega Menus Plugin on Github](https://github.com/lightspeeddevelopment/lsx-mega-menus) and submit a Pull Request with your updates.
 
 ## Changelog
 
