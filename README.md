@@ -11,7 +11,7 @@
 [LSX Sharing Extension](https://lsx.lsdev.biz/extensions/sharing/) adds buttons to your posts & pages that your readers can use to share your content on Facebook, Twitter and Pinterest.
 
 ## Works with the LSX Theme
-Our modern and lightweight [theme](https://lsx.lsdev.biz/) works perfectly with the Blog Customizer, improving internal linking, website SEO and user experience! 
+Our modern and lightweight [theme](https://lsx.lsdev.biz/) works perfectly with the Mega Menus, improving internal linking, website SEO and user experience! 
 
 ## Gutenberg Compatible Plugin
 Have you updated to the new WordPress Gutenberg editor? We've got you covered! The LSX Mega Menu Plugin has been optimised for the Gutenberg update. Check out our [release post](https://lsx.lsdev.biz/lsx-blocks-available-on-wordpress-org/) on the update for more information.
