@@ -8,7 +8,7 @@
     <a href="https://lsx.lsdev.biz/"><img src="https://lsx.lsdev.biz/wp-content/uploads/2019/06/Designed-for-LSX-Theme-blue.png" alt="Made for LSX"></a>
 </p>
 
-Go from mundane to mega with the [LSX Mega Menus Extension](https://lsx.lsdev.biz/extensions/mega-menus/) extension. Create beautiful full-width menu dropdowns that contain dynamic content such as images, icons, videos, and widget areas.It has a familiar drag and drop interface, and menu items that can easily be resized and reordered. It also allows you to preview before you publish.
+[LSX Sharing Extension](https://lsx.lsdev.biz/extensions/sharing/) adds buttons to your posts & pages that your readers can use to share your content on Facebook, Twitter and Pinterest.
 
 ## Works with the LSX Theme
 Our modern and lightweight [theme](https://lsx.lsdev.biz/) works perfectly with the Blog Customizer, improving internal linking, website SEO and user experience! 

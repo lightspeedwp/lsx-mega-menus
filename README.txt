@@ -11,7 +11,7 @@ License: GPLv3
 Go from mundane to mega with the [LSX Mega Menus Extension](https://lsx.lsdev.biz/extensions/mega-menus/) extension. Create beautiful full-width menu dropdowns that contain dynamic content such as images, icons, videos, and widget areas.It has a familiar drag and drop interface, and menu items that can easily be resized and reordered. It also allows you to preview before you publish.
 
 ## Works with the LSX Theme
-Our modern and lightweight [theme](https://lsx.lsdev.biz/) works perfectly with the Blog Customizer, improving internal linking, website SEO and user experience! 
+Our modern and lightweight [theme](https://lsx.lsdev.biz/) works perfectly with the Mega Menus, improving internal linking, website SEO and user experience! 
 
 ## Gutenberg Compatible Plugin
 Have you updated to the new WordPress Gutenberg editor? We've got you covered! The LSX Mega Menu Plugin has been optimised for the Gutenberg update. Check out our [release post](https://lsx.lsdev.biz/lsx-blocks-available-on-wordpress-org/) on the update for more information.
