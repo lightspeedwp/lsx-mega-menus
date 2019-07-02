@@ -1,6 +1,6 @@
 === LSX Mega Menus ===
 Contributors: feedmymedia
-Donate link: https://www.donate.lsdev.biz/
+Donate link: https://donate.lsdev.biz/
 Tags: lsx, Gutenberg, mega menu, wordpress blocks, navigation
 Requires at least: 4.3
 Tested up to: 5.2.1
