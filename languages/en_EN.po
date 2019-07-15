@@ -1,4 +1,4 @@
-# Copyright (C) 2017 lsx-mega-menus
+# Copyright (C) 2019 lsx-mega-menus
 # This file is distributed under the same license as the lsx-mega-menus package.
 msgid ""
 msgstr ""
@@ -14,7 +14,7 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: lsx-mega-menus.php:181
+#: lsx-mega-menus.php:107
 msgid "%sThanks for installing the LSX Mega Menus extension. To get started, visit the %sCustomizer%s.%s"
 msgstr ""
 

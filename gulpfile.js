@@ -12,7 +12,6 @@ const plumber      = require('gulp-plumber');
 const autoprefixer = require('gulp-autoprefixer');
 const gutil        = require('gulp-util');
 const rename       = require('gulp-rename');
-const minify       = require('gulp-minify-css');
 const map          = require('map-stream');
 const browserlist  = ['last 2 version', '> 1%'];
 
@@ -44,7 +43,7 @@ gulp.task('default', function() {
 	console.log('gulp wordpress-lang to compile the lsx-mega-menus.pot, en_EN.po and en_EN.mo');
 });
 
-gulp.task('styles', function () {
+gulp.task('styles', function (done) {
 	return gulp.src('assets/css/scss/*.scss')
 		.pipe(plumber({
 			errorHandler: function(err) {
@@ -62,10 +61,11 @@ gulp.task('styles', function () {
 			casacade: true
 		}))
 		.pipe(sourcemaps.write('maps'))
-		.pipe(gulp.dest('assets/css'))
+		.pipe(gulp.dest('assets/css')),
+		done();
 });
 
-gulp.task('styles-rtl', function () {
+gulp.task('styles-rtl', function (done) {
 	return gulp.src('assets/css/scss/*.scss')
 		.pipe(plumber({
 			errorHandler: function(err) {
@@ -85,12 +85,16 @@ gulp.task('styles-rtl', function () {
 		.pipe(rename({
 			suffix: '-rtl'
 		}))
-		.pipe(gulp.dest('assets/css'))
+		.pipe(gulp.dest('assets/css')),
+		done();
 });
 
-gulp.task('compile-css', ['styles', 'styles-rtl']);
+gulp.task('compile-css', gulp.series( ['styles', 'styles-rtl'], function(done) {
+	console.log('Done');
+	done();
+}));
 
-gulp.task('js', function() {
+gulp.task('js', function(done) {
 	return gulp.src('assets/js/src/lsx-mega-menus.js')
 		.pipe(plumber({
 			errorHandler: function(err) {
@@ -102,10 +106,11 @@ gulp.task('js', function() {
 		//.pipe(errorreporter)
 		.pipe(concat('lsx-mega-menus.min.js'))
 		.pipe(uglify())
-		.pipe(gulp.dest('assets/js'))
+		.pipe(gulp.dest('assets/js')),
+		done();
 });
 
-gulp.task('preview-js', function() {
+gulp.task('preview-js', function(done) {
 	return gulp.src('assets/js/src/lsx-mega-menus-preview.js')
 		.pipe(plumber({
 			errorHandler: function(err) {
@@ -117,22 +122,31 @@ gulp.task('preview-js', function() {
 		//.pipe(errorreporter)
 		.pipe(concat('lsx-mega-menus-preview.min.js'))
 		.pipe(uglify())
-		.pipe(gulp.dest('assets/js'))
+		.pipe(gulp.dest('assets/js')),
+		done();
 });
 
-gulp.task('compile-js', ['js', 'preview-js']);
+gulp.task('compile-js', gulp.series( ['js', 'preview-js'] , function(done) {
+	console.log('Done');
+	done();
+}));
 
-gulp.task('watch-css', function () {
-	return gulp.watch('assets/css/**/*.scss', ['compile-css']);
+gulp.task('watch-css', function (done) {
+	done();
+	return gulp.watch('assets/css/**/*.scss', gulp.series('compile-css'));
 });
 
-gulp.task('watch-js', function () {
-	return gulp.watch('assets/js/src/**/*.js', ['compile-js']);
+gulp.task('watch-js', function (done) {
+	done();
+	return gulp.watch('assets/js/src/**/*.js', gulp.series('compile-js'));
 });
 
-gulp.task('watch', ['watch-css', 'watch-js']);
+gulp.task('watch', gulp.series( ['watch-css', 'watch-js'] , function(done) {
+	console.log('Done');
+	done();
+}));
 
-gulp.task('wordpress-pot', function() {
+gulp.task('wordpress-pot', function(done) {
 	return gulp.src('**/*.php')
 		.pipe(sort())
 		.pipe(wppot({
@@ -140,10 +154,11 @@ gulp.task('wordpress-pot', function() {
 			package: 'lsx-mega-menus',
 			team: 'LightSpeed <webmaster@lsdev.biz>'
 		}))
-		.pipe(gulp.dest('languages/lsx-mega-menus.pot'))
+		.pipe(gulp.dest('languages/lsx-mega-menus.pot')),
+		done();
 });
 
-gulp.task('wordpress-po', function() {
+gulp.task('wordpress-po', function(done) {
 	return gulp.src('**/*.php')
 		.pipe(sort())
 		.pipe(wppot({
@@ -151,13 +166,18 @@ gulp.task('wordpress-po', function() {
 			package: 'lsx-mega-menus',
 			team: 'LightSpeed <webmaster@lsdev.biz>'
 		}))
-		.pipe(gulp.dest('languages/en_EN.po'))
+		.pipe(gulp.dest('languages/en_EN.po')),
+		done();
 });
 
-gulp.task('wordpress-po-mo', ['wordpress-po'], function() {
+gulp.task('wordpress-po-mo', gulp.series( ['wordpress-po'], function(done) {
+	done();
 	return gulp.src('languages/en_EN.po')
 		.pipe(gettext())
-		.pipe(gulp.dest('languages'))
-});
+		.pipe(gulp.dest('languages'));
+}));
 
-gulp.task('wordpress-lang', (['wordpress-pot', 'wordpress-po-mo']));
+gulp.task('wordpress-lang', gulp.series( ['wordpress-pot', 'wordpress-po-mo'] , function(done) {
+	console.log('Done');
+	done();
+}));
