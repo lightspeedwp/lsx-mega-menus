@@ -1,5 +1,8 @@
 ## Changelog
 
+### 1.2.1
+* Dev - Adding full width style when option is active.
+
 ### 1.2
 * Dev - Cleaned up Code
 

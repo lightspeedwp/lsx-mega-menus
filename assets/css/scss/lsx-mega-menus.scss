@@ -29,6 +29,24 @@ li.lsxmm-active {
 	}
 }
 
+@include media('>=desktop') {
+	#masthead {
+		.lsxmm-fullscreen {
+			.dropdown-menu {
+				&.lsxmm-sub-menu {
+					width: 101vw;
+					left: -10vw;
+					right: 0;
+					.lsxmm-mega-menu {
+						max-width: 1040px;
+						margin: 10px auto;
+					}
+				}
+			}
+		}
+	}
+}
+
 .lsxmm-mega-menu {
 	.lsxmm-row {
 		@include media('>=desktop') { display: flex; }

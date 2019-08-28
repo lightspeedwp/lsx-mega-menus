@@ -4,6 +4,9 @@ li.lsxmm-active.lsxmm-doing-preview ul.lsxmm-sub-menu { display: block; }
 
 @media (min-width: 1200px) { #masthead ul.lsxmm-sub-menu { right: 5%; width: 90%; } }
 
+@media (min-width: 1200px) { #masthead .lsxmm-fullscreen .dropdown-menu.lsxmm-sub-menu { width: 101vw; left: -10vw; right: 0; }
+  #masthead .lsxmm-fullscreen .dropdown-menu.lsxmm-sub-menu .lsxmm-mega-menu { max-width: 1040px; margin: 10px auto; } }
+
 @media (min-width: 1200px) { .lsxmm-mega-menu .lsxmm-row { display: -webkit-box; display: -ms-flexbox; display: flex; } }
 
 @media (min-width: 1200px) { .lsxmm-mega-menu [class*='lsxmm-span-'] { position: relative; } }
