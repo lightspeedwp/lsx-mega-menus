@@ -270,6 +270,20 @@ $animation_speed: .3s;
 				margin-right: 6px;
 			}
 		}
+
+		.lsxmm-fullscreen-checkbox {
+			position: absolute;
+			top: 0;
+			right: 106px;
+			line-height: 45px;
+			padding-left: 14px;
+			border-left: 1px solid #ddd;
+
+			input[type="checkbox"],
+			input[type="radio"] {
+				margin-right: 6px;
+			}
+		}
 	}
 
 	.lsxmm-notice {

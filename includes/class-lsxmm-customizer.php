@@ -29,6 +29,7 @@ class LSXMM_Customizer {
 
 		add_filter( 'pre_update_option_sidebars_widgets', array( $this, 'sidebars_widgets_save' ), 10, 2 );
 		add_filter( 'option_sidebars_widgets', array( $this, 'sidebars_widgets_load' ) );
+		//add_action( 'customize_register', array( $this, 'nav_menu_customizer_options' ) );
 	}
 
 	/**
@@ -117,6 +118,12 @@ class LSXMM_Customizer {
 		<script type="text/html" id="tmpl-lsxmm-configurator">
 			<div class="lsxmm-section-title">
 				<h1 class="lsxmm-item-title"><?php printf( esc_html__( '%sMega Menu%s: {{ data.item_title }}', 'lsx-mega-menus' ), '<strong>', '</strong>' ); ?></h1>
+				<span class="lsxmm-fullscreen-checkbox">
+					<label for="lsxmm-fullscreen-mega-menu-{{ data.item_id }}">
+						<input type="checkbox" id="lsxmm-fullscreen-mega-menu-{{ data.item_id }}" class="lsxmm-fullscreen-mega-menu" value="_blank" name="lsxmm-fullscreen-mega-menu" {{ data.fullscreenChecked }}>
+						<?php esc_attr_e( 'Fullscreen', 'lsx-mega-menus' ); ?>
+					</label>
+				</span>
 				<span class="lsxmm-enable-checkbox">
 					<label for="lsxmm-enable-mega-menu-{{ data.item_id }}">
 						<input type="checkbox" id="lsxmm-enable-mega-menu-{{ data.item_id }}" class="lsxmm-enable-mega-menu" value="_blank" name="lsxmm-enable-mega-menu" {{ data.checked }}>
@@ -151,9 +158,10 @@ class LSXMM_Customizer {
 					}
 
 					$saved_mega_menus[] = array(
-						'item_id'	=> $item,
-						'active'	=> $menu['active'],
-						'widgets'	=> $widgets,
+						'item_id'	 => $item,
+						'active'	 => $menu['active'],
+						'fullscreen' => $menu['fullscreen'],
+						'widgets'	 => $widgets,
 					);
 				}
 			}
@@ -200,6 +208,12 @@ class LSXMM_Customizer {
 				$mega_menu['active'] = true;
 			} else {
 				$mega_menu['active'] = false;
+			}
+
+			if ( isset( $v['fullscreen'] ) && true === json_decode( $v['fullscreen'] ) ) {
+				$mega_menu['fullscreen'] = true;
+			} else {
+				$mega_menu['fullscreen'] = false;
 			}
 
 			$mega_menu['widgets'] = array();
@@ -318,6 +332,47 @@ class LSXMM_Customizer {
 		}
 
 		return $setting_class;
+	}
+
+	/**
+	 * Registers the fullscreen customizer options
+	 *
+	 * @param object $wp_customize
+	 * @return void
+	 */
+	public function nav_menu_customizer_options( $wp_customize ) {
+		$nav_menus = wp_get_nav_menus();
+		if ( ! empty( $nav_menus ) ) {
+			foreach ( $nav_menus as $nav_menu ) {
+				$menu_setting_id = 'nav_menu[' . $nav_menu->term_id . ']';
+				$wp_customize->add_setting(
+					'lsx_mega_menu_fullscreen_' . $nav_menu->term_id,
+					array(
+						'capability'        => 'edit_theme_options',
+						'default'           => 0,
+						'sanitize_callback' => array( $this, 'sanitize_checkbox' ),
+					)
+				);
+
+				// add 'menu primary flex' checkbox control.
+				$wp_customize->add_control(
+					'lsx_mega_menu_fullscreen_' . $nav_menu->term_id,
+					array(
+						'label'    => __( 'Set the mega menus to full width.', 'lsx-mega-menus' ),
+						'section'  => $menu_setting_id,
+						'settings' => 'lsx_mega_menu_fullscreen_' . $nav_menu->term_id,
+						'std'      => '0',
+						'type'     => 'checkbox',
+						'priority' => 1,
+					)
+				);
+			}
+		}
+	}
+
+	// sanitize checkbox fields.
+	public function sanitize_checkbox( $input, $setting ) {
+		return sanitize_key( $input ) === '1' ? 1 : 0;
 	}
 
 }

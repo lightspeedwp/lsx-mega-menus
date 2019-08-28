@@ -33,7 +33,8 @@
 		widgetViews: [],
 		events: {
 			'click .lsxmm-add-new-widget': 'toggleAddWidgets',
-			'click .lsxmm-enable-mega-menu': 'enableCheckbox'
+			'click .lsxmm-enable-mega-menu': 'enableCheckbox',
+			'click .lsxmm-fullscreen-mega-menu': 'fullscreenCheckbox'
 		},
 
 		initialize: function() {
@@ -203,6 +204,11 @@
 				data.checked = 'checked';
 			}
 
+			// Handle the fullscreen checkbox
+			if ( true === data.fullscreen ) {
+				data.fullscreenChecked = 'checked';
+			}
+
 			self.$el.find( '.lsxmm-actions' ).html( self.template( data ) );
 
 			// Add widgets to grid
@@ -252,6 +258,14 @@
 
 			// Update preview
 			this.updatePreview();
+		},
+
+		fullscreenCheckbox: function( event ) {
+			var $checkbox;
+			$checkbox = $( event.currentTarget );
+			this.model.set({
+				'fullscreen': $checkbox.is( ':checked' )
+			});
 		},
 
 		processWidget: function( widget ) {

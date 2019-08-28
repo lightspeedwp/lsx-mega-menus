@@ -174,16 +174,16 @@ class LSXMM_Frontend {
 	public function nav_menu_css_class( $classes, $item, $args = array(), $depth = 0 ) {
 		if ( 0 === $depth && $this->_is_mega_menu( $item->ID ) ) {
 			$classes[] = 'lsxmm-active';
-
+			if ( true === $this->_is_mega_menu_fullscreen( $item->ID ) || '1' === $this->_is_mega_menu_fullscreen( $item->ID ) ) {
+				$classes[] = 'lsxmm-fullscreen';
+			}
 			if ( ! in_array( 'menu-item-has-children', $classes ) ) {
 				$classes[] = 'menu-item-has-children';
 			}
-
 			if ( ! in_array( 'dropdown', $classes ) ) {
 				$classes[] = 'dropdown';
 			}
 		}
-
 		return array_filter( $classes );
 	}
 
@@ -292,7 +292,6 @@ class LSXMM_Frontend {
 		}
 
 		$saved_data = get_option( 'LSXMM_DATA' );
-
 		if ( $saved_data && array_key_exists( intval( $item_id ), $saved_data ) ) {
 			return $saved_data[ intval( $item_id ) ];
 		}
@@ -359,6 +358,24 @@ class LSXMM_Frontend {
 			return true;
 		}
 
+		return false;
+	}
+
+	/**
+	 * Given a menu item id, tell if it is a mega menu. Also returns false for mega menus that are not active.
+	 */
+	private function _is_mega_menu_fullscreen( $item_id ) {
+		if ( ! $item_id ) {
+			return false;
+		}
+		$saved_data = get_option( 'LSXMM_DATA' );
+		if ( $saved_data && array_key_exists( intval( $item_id ), $saved_data ) ) {
+			$mega_menu = $saved_data[ intval( $item_id ) ];
+			if ( false === $mega_menu['fullscreen'] ) {
+				return false;
+			}
+			return true;
+		}
 		return false;
 	}
 

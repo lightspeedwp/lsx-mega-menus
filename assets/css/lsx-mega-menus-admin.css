@@ -156,7 +156,11 @@
 
 #lsxmm-configurator .lsxmm-section-title .lsxmm-enable-checkbox { position: absolute; top: 0; right: 13px; line-height: 45px; padding-left: 14px; border-left: 1px solid #ddd; }
 
+#lsxmm-configurator .lsxmm-section-title .lsxmm-fullscreen-checkbox { position: absolute; top: 0; right: 106px; line-height: 45px; padding-left: 14px; border-left: 1px solid #ddd; }
+
 #lsxmm-configurator .lsxmm-section-title .lsxmm-enable-checkbox input[type="checkbox"], #lsxmm-configurator .lsxmm-section-title .lsxmm-enable-checkbox input[type="radio"] { margin-right: 6px; }
+
+#lsxmm-configurator .lsxmm-section-title .lsxmm-fullscreen-checkbox input[type="checkbox"], #lsxmm-configurator .lsxmm-section-title .lsxmm-fullscreen-checkbox input[type="radio"] { margin-right: 6px; }
 
 #lsxmm-configurator .lsxmm-notice { display: none; color: #969370; background: #FFFFDD; padding: 12px; margin: 0; border-style: solid; border-color: #EFEBBA; border-width: 0 0 1px 0; }
 
