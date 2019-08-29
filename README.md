@@ -33,6 +33,10 @@ If you are experiencing issues with the LSX Mega Menus Plugin & have experience 
 
 If you're a developer who's spotted a bug issue and have a fix, or simply have functionality you think would extend our core theme, we are always happy to accept your contribution! Visit the [LSX Mega Menus Plugin on Github](https://github.com/lightspeeddevelopment/lsx-mega-menus) and submit a Pull Request with your updates.
 
+## Shortcodes
+
+[lsx_title_link url="https://lsdev.biz" title="LightSpeed" id=""]
+
 ## Changelog
 
 ### 1.2

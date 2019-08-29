@@ -26,6 +26,9 @@ class LSXMM_Frontend {
 		if ( is_admin() ) {
 			add_filter( 'lsx_customizer_colour_selectors_main_menu', array( $this, 'customizer_nav_colours_handler' ), 15, 2 );
 		}
+
+		add_filter( 'widget_title', array( $this, 'link_widget_titles' ), 300, 1 );
+		add_shortcode( 'lsx_title_link', array( $this, 'widget_title_link' ) );
 	}
 
 	/**
@@ -414,6 +417,45 @@ class LSXMM_Frontend {
 		return $css;
 	}
 
+	/**
+	 * Filters the widget title and adds in the link.
+	 *
+	 * @param string $title
+	 * @return string
+	 */
+	public function link_widget_titles( $title = '' ) {
+		$title = do_shortcode( $title );
+		return $title;
+	}
+
+	/**
+	 * [lsx_title_link url="https://example.com" title="Title" id=""]
+	 *
+	 * @param array $atts
+	 * @return string
+	 */
+	public function widget_title_link( $atts ) {
+		$clean_args = array();
+		foreach ( $atts as $key => $value ) {
+			$value              = html_entity_decode( $value );
+			$value              = str_replace( '"', '', $value );
+			$value              = str_replace( "'", "", $value );
+			$clean_args[ $key ] = $value;
+		}
+		$a   = wp_parse_args(
+			$clean_args,
+			array(
+				'url'   => '',
+				'title' => '',
+				'id'    => '',
+			)
+		);
+		$url = $a['url'];
+		if ( '' !== $a['id'] ) {
+			$url = $a['id'];
+		}
+		return '<a href="' . $url . '">' . $a['title'] . '</a>';
+	}
 }
 
 new LSXMM_Frontend();

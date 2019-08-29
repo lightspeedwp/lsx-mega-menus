@@ -2,6 +2,7 @@
 
 ### 1.2.1
 * Dev - Adding full width style when option is active.
+* Dev - Added in a shortcode option to link the widget titles.
 
 ### 1.2
 * Dev - Cleaned up Code
