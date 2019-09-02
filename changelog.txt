@@ -3,6 +3,7 @@
 ### 1.2.1
 * Dev - Adding full width style when option is active.
 * Dev - Added in a shortcode option to link the widget titles.
+* Dev - Adding the .gitattributes file to remove unnecessary files from the WordPress version.
 
 ### 1.2
 * Dev - Cleaned up Code
