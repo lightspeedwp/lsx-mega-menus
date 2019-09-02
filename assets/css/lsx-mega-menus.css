@@ -4,8 +4,8 @@ li.lsxmm-active.lsxmm-doing-preview ul.lsxmm-sub-menu { display: block; }
 
 @media (min-width: 1200px) { #masthead ul.lsxmm-sub-menu { left: 5%; width: 90%; } }
 
-@media (min-width: 1200px) { #masthead .lsxmm-fullscreen .dropdown-menu.lsxmm-sub-menu { width: 101vw; left: -10vw; right: 0; }
-  #masthead .lsxmm-fullscreen .dropdown-menu.lsxmm-sub-menu .lsxmm-mega-menu { max-width: 1040px; margin: 10px auto; } }
+@media (min-width: 1200px) { #masthead .lsxmm-fullscreen .dropdown-menu.lsxmm-sub-menu { width: 100vw; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;}
+  #masthead .lsxmm-fullscreen .dropdown-menu.lsxmm-sub-menu .lsxmm-mega-menu { max-width: 1140px; margin: 0 auto; } }
 
 @media (min-width: 1200px) { .lsxmm-mega-menu .lsxmm-row { display: -webkit-box; display: -ms-flexbox; display: flex; } }
 

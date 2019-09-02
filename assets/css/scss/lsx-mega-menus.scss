@@ -34,12 +34,14 @@ li.lsxmm-active {
 		.lsxmm-fullscreen {
 			.dropdown-menu {
 				&.lsxmm-sub-menu {
-					width: 101vw;
-					left: -10vw;
-					right: 0;
+					width: 100vw;
+					left: 50%;
+					right: 50%;
+					margin-left: -50vw;
+					margin-right: -50vw;
 					.lsxmm-mega-menu {
-						max-width: 1040px;
-						margin: 10px auto;
+						max-width: 1140px;
+						margin: 0 auto;
 					}
 				}
 			}
