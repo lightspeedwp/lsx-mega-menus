@@ -39,6 +39,10 @@ If you're a developer who's spotted a bug issue and have a fix, or simply have f
 
 ## Changelog
 
+### 1.2.1
+* Dev - Adding full width style when option is active.
+* Dev - Added in a shortcode option to link the widget titles.
+
 ### 1.2
 * Dev - Cleaned up Code
 

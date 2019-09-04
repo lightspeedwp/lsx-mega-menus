@@ -5,7 +5,7 @@ Tags: lsx, Gutenberg, mega menu, wordpress blocks, navigation
 Requires at least: 4.9
 Tested up to: 5.2.2
 Requires PHP: 7.0
-Stable tag: 1.2
+Stable tag: 1.2.1
 License: GPLv3
 
 Go from mundane to mega with the [LSX Mega Menus Extension](https://lsx.lsdev.biz/extensions/mega-menus/) extension. Create beautiful full-width menu dropdowns that contain dynamic content such as images, icons, videos, and widget areas.It has a familiar drag and drop interface, and menu items that can easily be resized and reordered. It also allows you to preview before you publish.
