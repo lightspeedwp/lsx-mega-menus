@@ -241,6 +241,7 @@ class LSXMM_Frontend {
 			'after_widget'  => $args['after_widget'],
 			'widget_id'     => $widget_id,
 			'widget_name'   => $wp_registered_widgets[ $widget_id ]['name'],
+			'lsx_mm'	    => true,
 		);
 
 		// Substitute HTML id and class attributes into before_widget.
