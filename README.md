@@ -39,6 +39,9 @@ If you're a developer who's spotted a bug issue and have a fix, or simply have f
 
 ## Changelog
 
+### 1.2.2
+* Dev - Added in a parameter to the widget args, to allow widget template to know when it is a menu loading it.
+
 ### 1.2.1
 * Dev - Adding full width style when option is active.
 * Dev - Added in a shortcode option to link the widget titles.

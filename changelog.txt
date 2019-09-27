@@ -1,6 +1,6 @@
 ## Changelog
 
-### 1.2.2 (in development)
+### 1.2.2 - September 27
 * Dev - Added in a parameter to the widget args, to allow widget template to know when it is a menu loading it.
 
 ### 1.2.1
