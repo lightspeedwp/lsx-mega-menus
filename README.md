@@ -39,6 +39,9 @@ If you're a developer who's spotted a bug issue and have a fix, or simply have f
 
 ## Changelog
 
+### 1.2.3
+* Dev - Checking compatibility with LSX 2.6 release.
+
 ### 1.2.2
 * Dev - Added in a parameter to the widget args, to allow widget template to know when it is a menu loading it.
 
