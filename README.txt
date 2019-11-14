@@ -3,7 +3,7 @@ Contributors: feedmymedia
 Donate link: https://donate.lsdev.biz/
 Tags: lsx, Gutenberg, mega menu, wordpress blocks, navigation
 Requires at least: 4.9
-Tested up to: 5.2.2
+Tested up to: 5.3
 Requires PHP: 7.0
 Stable tag: 1.2.3
 License: GPLv3
