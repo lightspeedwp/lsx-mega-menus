@@ -1,11 +1,11 @@
 === LSX Mega Menus ===
 Contributors: feedmymedia
 Donate link: https://donate.lsdev.biz/
-Tags: lsx, Gutenberg, mega menu, wordpress blocks, navigation
+Tags: lsx, Gutenberg, mega menu, WordPress blocks, navigation
 Requires at least: 4.9
 Tested up to: 5.3
 Requires PHP: 7.0
-Stable tag: 1.2.3
+Stable tag: 1.2.4
 License: GPLv3
 
 Go from mundane to mega with the [LSX Mega Menus Extension](https://lsx.lsdev.biz/extensions/mega-menus/) extension. Create beautiful full-width menu dropdowns that contain dynamic content such as images, icons, videos, and widget areas.It has a familiar drag and drop interface, and menu items that can easily be resized and reordered. It also allows you to preview before you publish.
@@ -38,41 +38,3 @@ If you're a developer who's spotted a bug issue and have a fix, or simply have f
 1. Website Showcase
 2. Customizer View
 3. Widget View
-
-## Changelog
-
-### 1.2.3
-* Dev - Checking compatibility with LSX 2.6 release.
-
-### 1.2.2
-* Dev - Added in a parameter to the widget args, to allow widget template to know when it is a menu loading it.
-
-### 1.2
-* Dev - Cleaned up Code
-
-### 1.1.1
-* Fix - Compatibility with the new WordPress 4.8 media widgets.
-
-### 1.1.0
-* Added compatibility with LSX 2.0
-* Dev - New project structure
-* Dev - UIX copied from TO 1.1 + Fixed issue with sub tabs click (settings)
-* Fix - Fixed scripts/styles loading order
-* Fix - Fixed small issues
-* Fix - Added compatibility to WordPress 4.8
-
-### 1.0.3
-* Fix - Compatibility with WordPress 4.7
-* Fix - Compatibility with LSX Theme (mobile)
-* Fix - Adjusted the plugin settings link inside the LSX API Class
-* Fix - Menu item hover
-
-### 1.0.2
-* Fix - Fixed all prefixes replaces (to_ > lsx_to_, TO_ > LSX_TO_)
-
-### 1.0.1
-* Fix - Reduced the access to server (check API key status) using transients
-* Fix - Made the API URLs dev/live dynamic using a prefix "dev-" in the API KEY
-
-### 1.0.0
-* First Version
