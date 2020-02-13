@@ -21,7 +21,8 @@
 		defaults: {
 			item_id: null,
 			active: true,
-			widgets: null
+			widgets: null,
+			fullscreen: true,
 		},
 
 		initialize: function() {
@@ -41,7 +42,8 @@
 
 				this.set({
 					'widgets': new api.LSXMM.WidgetsCollection( orderedWidgets ),
-					'active': newObj.active
+					'active': newObj.active,
+					'fullscreen': newObj.fullscreen
 				});
 			} else {
 				this.set({
