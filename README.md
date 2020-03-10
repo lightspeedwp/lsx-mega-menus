@@ -10,6 +10,10 @@
 
 [LSX Sharing Extension](https://lsx.lsdev.biz/extensions/sharing/) adds buttons to your posts & pages that your readers can use to share your content on Facebook, Twitter and Pinterest.
 
+## Shortcodes
+
+`[lsx_title_link url="https://lsdev.biz" title="LightSpeed" id=""]`
+
 ## Works with the LSX Theme
 Our modern and lightweight [theme](https://lsx.lsdev.biz/) works perfectly with LSX Mega Menus, improving internal linking, website SEO and user experience! 
 
@@ -33,6 +37,5 @@ If you are experiencing issues with the LSX Mega Menus Plugin & have experience 
 
 If you're a developer who's spotted a bug issue and have a fix, or simply have functionality you think would extend our core theme, we are always happy to accept your contribution! Visit the [LSX Mega Menus Plugin on Github](https://github.com/lightspeeddevelopment/lsx-mega-menus) and submit a Pull Request with your updates.
 
-## Shortcodes
-
-[lsx_title_link url="https://lsdev.biz" title="LightSpeed" id=""]
+## Like what you see?
+<a href="https://www.lsdev.biz/contact/"><img src="https://www.lsdev.biz/wp-content/uploads/2020/02/work-with-lightspeed.png" width="850" alt="Work with us at LightSpeed"></a>
