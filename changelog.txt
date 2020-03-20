@@ -1,4 +1,16 @@
-## Changelog
+# Change log
+
+
+## [Unreleased] - Minor version 1.2.5
+
+### Fixed
+- Fixed the issue `PHP Notice: Undefined index: fullscreen`,
+- Fixed the issue `Uncaught TypeError: Cannot read property 'id' of undefined`.
+
+### Security
+- General testing to ensure compatibility with latest WordPress version (5.4).
+- General testing to ensure compatibility with latest LSX Theme version (2.7).
+
 
 ### 1.2.4 - 19 december 2019
 * Dev - General testing to ensure compatibility with latest WordPress version (5.3).
