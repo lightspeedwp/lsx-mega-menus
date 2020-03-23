@@ -270,11 +270,11 @@
 
 		processWidget: function( widget ) {
 			var model, childWidgetItemView, widgetExists;
-
-			if ( ! widget.id ) {
+			
+			if ( undefined == widget ) {
 				return;
 			}
-
+			model = JSON.stringify(this.model.get( 'widgets' ) );
 			model = this.model.get( 'widgets' ).get( widget.id );
 
 			// Add widget model to collection
@@ -287,7 +287,7 @@
 				if ( widgetView.id === widget.id ) {
 					return widgetView;
 				}
-
+				console.log( 'test 3' + widgetView );
 				return false;
 			});
 

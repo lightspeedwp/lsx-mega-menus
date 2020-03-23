@@ -375,7 +375,8 @@ class LSXMM_Frontend {
 		$saved_data = get_option( 'LSXMM_DATA' );
 		if ( $saved_data && array_key_exists( intval( $item_id ), $saved_data ) ) {
 			$mega_menu = $saved_data[ intval( $item_id ) ];
-			if ( ! isset( $mega_menu['fullscreen'] ) || false === $mega_menu['fullscreen'] ) {
+
+			if ( ! isset( $mega_menu['fullscreen'] ) || false === $mega_menu['fullscreen'] || '' === $mega_menu['fullscreen'] ) {
 				return false;
 			}
 			return true;
