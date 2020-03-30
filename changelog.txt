@@ -1,7 +1,7 @@
 # Change log
 
 
-## [Unreleased] - Minor version 1.2.5
+## [[1.2.5]](https://github.com/lightspeeddevelopment/lsx-mega-menus/releases/tag/1.2.5) - 2020-03-30
 
 ### Fixed
 - Fixed the issue `PHP Notice: Undefined index: fullscreen`,
