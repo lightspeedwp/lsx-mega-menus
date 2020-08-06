@@ -39,7 +39,7 @@
     "susy": "^3.0.6"
   },
   "dependencies": {
-    "braces": "^2.3.1",
+    "braces": "^3.0.2",
     "clean-css": "^4.1.11",
     "gulp-plumber": "^1.2.1",
     "stringstream": "1.0.0"
