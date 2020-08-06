@@ -42,6 +42,6 @@
     "braces": "^2.3.1",
     "clean-css": "^4.1.11",
     "gulp-plumber": "^1.2.1",
-    "stringstream": "0.0.6"
+    "stringstream": "1.0.0"
   }
 }
