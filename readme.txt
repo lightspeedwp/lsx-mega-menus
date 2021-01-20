@@ -1,6 +1,7 @@
 === LSX Mega Menus ===
 Contributors: feedmymedia, lightspeedwp, eleshar, krugazul, jacquesvdh, ignusvermaak
 Donate link: https://lsdev.biz/lsx/donate/
+Tags: lsx, mega menu, nav menu, navigation, widget enabled
 Requires at least: 5.0
 Tested up to: 5.6
 Requires PHP: 7.0
