@@ -3,7 +3,7 @@ Contributors: feedmymedia, lightspeedwp, eleshar, krugazul, jacquesvdh, ignusver
 Donate link: https://lsdev.biz/lsx/donate/
 Tags: lsx, mega menu, nav menu, navigation, widget enabled
 Requires at least: 5.0
-Tested up to: 5.7
+Tested up to: 5.8
 Requires PHP: 7.0
 Stable tag: 1.2.6
 License: GPLv3
