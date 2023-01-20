@@ -40,7 +40,7 @@
   },
   "dependencies": {
     "braces": "^3.0.2",
-    "clean-css": "^5.3.1",
+    "clean-css": "^5.3.2",
     "gulp-plumber": "^1.2.1",
     "stringstream": "1.0.0"
   }
