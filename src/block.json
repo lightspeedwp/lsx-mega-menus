@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "lsx-blocks/megamenu",
+	"version": "1.0.0",
+	"title": "LSX Mega Menu",
+	"category": "design",
+	"icon": "smiley",
+	"parent": [ "core/navigation" ],
+	"description": "An example block to display a string from post meta.",
+	"attributes": {
+		"menu": {
+			"type": "string",
+			"source": "text",
+			"selector": "div"
+		}
+	},
+	"usesContext": [ "inserter" ],
+	"supports": {
+		"html": true
+	},
+	"textdomain": "lsx-blocks"
+}
