@@ -1,5 +1,8 @@
 # Change log
 
+## [[2.0.0]](https://github.com/lightspeeddevelopment/lsx-mega-menus/releases/tag/2.0.0) - IN DEVELOPMENT
+- 
+
 ## [[1.2.6]](https://github.com/lightspeeddevelopment/lsx-mega-menus/releases/tag/1.2.6) - 2021-01-15
 
 ### Updated
