@@ -26,13 +26,14 @@ require_once LSX_MEGAMENU_PATH . 'includes/class-core.php';
 
 /**
  * Returns the main instance of LSX_Mega_Menus to prevent the need to use globals.
+ * 
+ * @return object \LSX\MegaMenus\Core();
  */
 function LSX_Mega_Menus() {
 	global $lsx_mega_menu;
 	if ( null === $lsx_mega_menu ) {
-		
-	} else {
-
+		$lsx_mega_menu = new \LSX\MegaMenus\Core();
+		$lsx_mega_menu->init();
 	}
 	return $lsx_mega_menu;
 }
