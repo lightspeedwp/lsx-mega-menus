@@ -20,28 +20,15 @@
     "url": "https://github.com/lightspeeddevelopment/lsx-mega-menus/issues"
   },
   "homepage": "https://github.com/lightspeeddevelopment/lsx-mega-menus",
-  "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^8.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-gettext": "^0.3.0",
-    "gulp-jshint": "^2.1.0",
-    "gulp-rename": "^2.0.0",
-    "gulp-rtlcss": "^2.0.0",
-    "gulp-sass": "^5.1.0",
-    "gulp-sort": "^2.0.0",
-    "gulp-sourcemaps": "^3.0.0",
-    "gulp-uglify": "^3.0.2",
-    "gulp-util": "^3.0.8",
-    "gulp-wp-pot": "^2.5.0",
-    "jshint": "^2.13.6",
-    "map-stream": "^0.0.7",
-    "susy": "^3.0.8"
-  },
-  "dependencies": {
-    "braces": "^3.0.2",
-    "clean-css": "^5.3.2",
-    "gulp-plumber": "^1.2.1",
-    "stringstream": "1.0.0"
-  }
+  "scripts": {
+		"build-blocks": "wp-scripts build src/index.js --output-path=build",
+		"build-pot": "wp i18n make-pot . languages/lsx-mega-menus.pot",
+		"build-mopo": "rm -R languages/lsx-mega-menus-en_EN.mo && cp languages/lsx-mega-menus.pot languages/lsx-mega-menus-en_EN.po && wp i18n make-mo languages",
+		"translate-US": "cp languages/lsx-mega-menus-en_EN.po languages/lsx-mega-menus-en_US.po && cp languages/lsx-mega-menus-en_EN.mo languages/lsx-mega-menus-en_US.mo"
+	},
+	"devDependencies": {
+		"@wordpress/block-library": "^8.5.0",
+		"@wordpress/icons": "^9.19.0",
+		"@wordpress/scripts": "^25.3.0"
+	}
 }
