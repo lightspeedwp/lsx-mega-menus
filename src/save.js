@@ -17,7 +17,25 @@ import { useBlockProps } from '@wordpress/block-editor';
  * @param {Object} props.attributes Available block attributes.
  * @return {WPElement} Element to render.
  */
-export default function save( { attributes } ) {
+export default function save( { _ref } ) {
+
+	let {
+		attributes,
+		isSelected,
+		setAttributes,
+		mergeBlocks,
+		onReplace,
+		context,
+		clientId
+	} = _ref;
+
+	const {
+		showSubmenuIcon,
+		maxNestingLevel,
+		openSubmenusOnClick
+	} = context;
+
 	const blockProps = useBlockProps.save();
+
 	return ( <div { ...blockProps }>{ attributes.menu }</div> );
 }

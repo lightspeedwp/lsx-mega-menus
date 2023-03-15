@@ -1,7 +1,7 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 2,
-	"name": "lsx-blocks/megamenu",
+	"name": "lsx/lsx-mega-menu",
 	"version": "1.0.0",
 	"title": "LSX Mega Menu",
 	"category": "design",
@@ -19,5 +19,5 @@
 	"supports": {
 		"html": true
 	},
-	"textdomain": "lsx-blocks"
+	"textdomain": "lsx-mega-menu"
 }

@@ -7,9 +7,9 @@ import metadata from './block.json';
 const megaMenuTransforms = {
 	from: [{
 	  type: 'block',
-	  blocks: ['core/home-link','core/social-links','core/spacer','core/site-logo','core/search','core/navigation-link'],
+	  blocks: ['core/home-link','core/navigation-link','core/submenu'],
 	  transform: () => {
-		return (0,wp.blocks.createBlock)('lsx-blocks/megamenu');
+		return (0,wp.blocks.createBlock)(metadata.name);
 	  }
 	}]
   };

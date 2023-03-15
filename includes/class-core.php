@@ -28,7 +28,7 @@ class Core {
 	public function register_block_variations() {
 		wp_enqueue_script(
 			'lsx-mega-menu-block',
-			LSX_MEGAMENU_URL . '/build/blocks.js',
+			LSX_MEGAMENU_URL . '/build/index.js',
 			array( 'wp-blocks','wp-element','wp-primitives' )
 		);
 	}
@@ -40,7 +40,7 @@ class Core {
 	 */
 	function register_block_type() {
 		register_block_type(
-			LSX_BLOCKS_PATH . 'src/',
+			LSX_MEGAMENU_PATH . 'src/',
 		);
 	}
 
@@ -52,7 +52,7 @@ class Core {
 	 * @return string
 	 */
 	public function render_mega_menu_block( $block_content = '', $block = [] ) {
-		if ( ! isset( $block['blockName'] ) || 'lsx-blocks/megamenu' === $block['blockName'] ) {
+		if ( ! isset( $block['blockName'] ) || 'lsx/lsx-mega-menu' === $block['blockName'] ) {
 			return $block_content;
 		}
 
