@@ -42,6 +42,10 @@ class Core {
 		register_block_type(
 			LSX_MEGAMENU_PATH . 'src/',
 		);
+
+		register_block_type(
+			LSX_MEGAMENU_PATH . 'menu-item/',
+		);
 	}
 
 	/**

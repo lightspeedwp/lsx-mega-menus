@@ -1,0 +1,11 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "lsx/lsx-mega-menu-item",
+	"version": "1.0.0",
+	"title": "LSX Mega Menu",
+	"category": "design",
+	"icon": "submenu",
+	"parent": [ "lsx/lsx-mega-menu" ],
+	"textdomain": "lsx-mega-menu"
+}

@@ -30,9 +30,9 @@ const name = "lsx/lsx-mega-menu";
 import { LinkUI } from '../node_modules/@wordpress/block-library/build-module/navigation-link/link-ui';
 import { updateAttributes } from '../node_modules/@wordpress/block-library/build-module/navigation-link/update-attributes';
 import { getColors, getNavigationChildBlockProps } from '../node_modules/@wordpress/block-library/build-module/navigation/edit/utils';
-const ALLOWED_BLOCKS = ['core/navigation-link', 'core/navigation-submenu', 'core/page-list'];
+const ALLOWED_BLOCKS = ['core/navigation-link', 'core/navigation-submenu', 'core/page-list', 'lsx/lsx-mega-menu-item'];
 const DEFAULT_BLOCK = {
-  name: 'core/navigation-link'
+  name: 'lsx/lsx-mega-menu-item'
 };
 /**
  * A React hook to determine if it's dragging within the target element.
@@ -114,9 +114,6 @@ export default function NavigationSubmenuEdit(_ref) {
     context,
     clientId
   } = _ref;
-
-  console.log(_ref);
-  console.log(context);
 
   const {
     label,
@@ -296,7 +293,8 @@ export default function NavigationSubmenuEdit(_ref) {
   }); // Always use overlay colors for submenus.
 
   const innerBlocksColors = getColors(context, true);
-  const allowedBlocks = isAtMaxNesting ? ALLOWED_BLOCKS.filter(blockName => blockName !== 'core/navigation-submenu') : ALLOWED_BLOCKS;
+  const allowedBlocks = isAtMaxNesting ? ALLOWED_BLOCKS.filter(blockName => blockName !== 'lsx/lsx-mega-menu') : ALLOWED_BLOCKS;
+
   const navigationChildBlockProps = getNavigationChildBlockProps(innerBlocksColors);
   const innerBlocksProps = useInnerBlocksProps(navigationChildBlockProps, {
     allowedBlocks,
