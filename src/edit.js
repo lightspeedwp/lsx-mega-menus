@@ -43,21 +43,21 @@ export default function Edit( props ) {
 	const [isLinkOpen, setIsLinkOpen] = useState(false); // Use internal state instead of a ref to make sure that the component
 	const [popoverAnchor, setPopoverAnchor] = useState(null);
 	const ref = useRef();
-	const itemLabelPlaceholder = __('Add text…');
+	const ParentElement = openSubmenusOnClick ? 'button' : 'a';
+	
 
 	// Get the wp_template_parts
 	const templateParts = useSelect( ( select ) => {
 		return select( 'core' ).getEntityRecords( 'postType', 'wp_template_part' )
 	} )
+	const itemLabelPlaceholder = __('Add text…');
 
-
-	let html = '';
+	let html = {};
 
 	if ( null === templateParts ) {
 		html = ( <div>Loading</div> );
 	} else {
-
-		/*html = createElement(RichText, {
+		html = createElement(RichText, {
 			ref: ref,
 			identifier: "label",
 			className: "wp-block-navigation-item__label",
@@ -74,7 +74,7 @@ export default function Edit( props ) {
 				setIsLinkOpen(true);
 			  }
 			}
-		});*/
+		});
 
 		/*let options = [];
 		options.push( { value: '', label: 'None' } );
@@ -94,22 +94,5 @@ export default function Edit( props ) {
 			/>
 		);*/
 	}
-	return createElement(RichText, {
-		ref: ref,
-		identifier: "label",
-		className: "wp-block-navigation-item__label",
-		value: label,
-		onChange: labelValue => setAttributes({
-		  label: labelValue
-		}),
-		"aria-label": __('Navigation link text'),
-		placeholder: itemLabelPlaceholder,
-		withoutInteractiveFormatting: true,
-		allowedFormats: ['core/bold', 'core/italic', 'core/image', 'core/strikethrough'],
-		onClick: () => {
-		  if (! openSubmenusOnClick && !url) {
-			setIsLinkOpen(true);
-		  }
-		}
-	});
+	return html;
 }
