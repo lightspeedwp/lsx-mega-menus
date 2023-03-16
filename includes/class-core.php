@@ -40,11 +40,11 @@ class Core {
 	 */
 	function register_block_type() {
 		register_block_type(
-			LSX_MEGAMENU_PATH . 'src/',
+			LSX_MEGAMENU_PATH . 'src/mega-menu/',
 		);
 
 		register_block_type(
-			LSX_MEGAMENU_PATH . 'menu-item/',
+			LSX_MEGAMENU_PATH . 'src/menu-item/',
 		);
 	}
 

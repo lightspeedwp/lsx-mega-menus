@@ -20,7 +20,7 @@ export default function Edit( props ) {
 	} else {
 
 		let options = [];
-		options.push( { value: '', label: 'None' } );
+		options.push( { value: '', label: 'Select a mega menu:' } );
 		templateParts.forEach( ( part ) => {
 			if ( -1 < part.slug.search('mega-menu')  ) {
 				options.push( { value : part.slug, label : part.title.rendered } )
@@ -29,7 +29,6 @@ export default function Edit( props ) {
 
 		html = (
 			<SelectControl
-				label={ 'Select a mega menu:' }
 				value={ props.attributes.menu }
 				onChange={ ( menu ) => {
 					props.setAttributes( { menu } );

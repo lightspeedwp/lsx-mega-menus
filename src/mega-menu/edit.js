@@ -25,11 +25,11 @@ import { useMergeRefs, usePrevious } from '@wordpress/compose';
  * Internal dependencies
  */
 
-import { ItemSubmenuIcon } from '../node_modules/@wordpress/block-library/build-module/navigation-submenu/icons';
+import { ItemSubmenuIcon } from '../../node_modules/@wordpress/block-library/build-module/navigation-submenu/icons.js';
 const name = "lsx/lsx-mega-menu";
-import { LinkUI } from '../node_modules/@wordpress/block-library/build-module/navigation-link/link-ui';
-import { updateAttributes } from '../node_modules/@wordpress/block-library/build-module/navigation-link/update-attributes';
-import { getColors, getNavigationChildBlockProps } from '../node_modules/@wordpress/block-library/build-module/navigation/edit/utils';
+import { LinkUI } from '../../node_modules/@wordpress/block-library/build-module/navigation-link/link-ui';
+import { updateAttributes } from '../../node_modules/@wordpress/block-library/build-module/navigation-link/update-attributes';
+import { getColors, getNavigationChildBlockProps } from '../../node_modules/@wordpress/block-library/build-module/navigation/edit/utils';
 const ALLOWED_BLOCKS = ['core/navigation-link', 'core/navigation-submenu', 'core/page-list', 'lsx/lsx-mega-menu-item'];
 const DEFAULT_BLOCK = {
   name: 'lsx/lsx-mega-menu-item'
