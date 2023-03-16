@@ -1,6 +1,7 @@
 import { registerBlockType } from '@wordpress/blocks';
+import { page, addSubmenu } from '@wordpress/icons';
 
-import Edit from './edit';
+import NavigationSubmenuEdit from './edit';
 import Save from './save';
 import metadata from './block.json';
 
@@ -15,13 +16,39 @@ const megaMenuTransforms = {
   };
   /* harmony default export */ var menuTransforms = (megaMenuTransforms);
 
+const attributes = {
+	menu: {
+		type: "string"
+	},
+	id: {
+		type: "number"
+	},
+	opensInNewTab: {
+		type: "boolean",
+		"default": false
+	},
+	url: {
+		type: "string"
+	},
+	title: {
+		type: "string"
+	},
+	kind: {
+		type: "string"
+	},
+	isTopLevelItem: {
+		type: "boolean"
+	}
+}  
+
 registerBlockType( 
 	metadata.name, {
 		title: metadata.title,
 		description: metadata.description,
-		edit: Edit,
+		edit: NavigationSubmenuEdit,
 		save: Save,
-		transforms: menuTransforms
+		transforms: menuTransforms,
+		attributes: attributes
 	}
 );
 
