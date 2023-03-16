@@ -20,7 +20,13 @@ import { useBlockProps } from '@wordpress/block-editor';
 export default function save( { _ref } ) {
 
 	let {
-		attributes
+		attributes,
+		isSelected,
+		setAttributes,
+		mergeBlocks,
+		onReplace,
+		context,
+		clientId
 	} = _ref;
 
 	const {
