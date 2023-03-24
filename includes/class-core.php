@@ -17,6 +17,7 @@ class Core {
 	public function init() {
 		add_action( 'enqueue_block_editor_assets', array( $this, 'register_blocks' ) );
 		add_action( 'init', array( $this, 'register_block_type' ), 20 );
+		add_action( 'after_setup_theme', array( $this, 'enqueue_block_styles' ), 10 );
 	}
 
 	/**
@@ -92,10 +93,26 @@ class Core {
 			)
 		);
 
-		$html  = '<li ' . $wrapper_attributes . '>' . $attributes['menu'];
+		$html  = '<li ' . $wrapper_attributes . '>';
 		$html .= apply_filters( 'the_content', $menu->post_content );
 		$html .= '</li>';
 
 		return $html;
+	}
+
+	/**
+	 * Registers our block specific styles.
+	 *
+	 * @return void
+	 */
+	public function enqueue_block_styles() {
+		wp_enqueue_block_style(
+			'lsx/lsx-mega-menu',
+			array(
+				'handle' => 'lsx-mega-menu-styles',
+				'src'    => LSX_MEGAMENU_URL . '/assets/lsx-mega-menu.css',
+				'path'   => LSX_MEGAMENU_PATH . '/assets/lsx-mega-menu.css',
+			),
+		);
 	}
 }
