@@ -41,10 +41,16 @@ class Core {
 	function register_block_type() {
 		register_block_type(
 			LSX_MEGAMENU_PATH . 'src/mega-menu/',
+			array(
+				'render_callback' => 'render_block_core_navigation_submenu',
+			)
 		);
 
 		register_block_type(
 			LSX_MEGAMENU_PATH . 'src/menu-item/',
+			array(
+				'render_callback' => 'render_block_core_navigation_link',
+			)
 		);
 	}
 

@@ -9,5 +9,41 @@
   "parent": [
     "lsx/lsx-mega-menu"
   ],
-  "textdomain": "lsx-mega-menu"
+  "textdomain": "lsx-mega-menu",
+  "attributes": {
+    "menu": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "rel": {
+      "type": "string"
+    },
+    "id": {
+      "type": "number"
+    },
+    "opensInNewTab": {
+      "type": "boolean",
+      "default": false
+    },
+    "url": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "kind": {
+      "type": "string"
+    },
+    "isTopLevelLink": {
+      "type": "boolean"
+    }
+  }
 }

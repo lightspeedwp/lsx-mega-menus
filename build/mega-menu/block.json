@@ -11,7 +11,16 @@
   ],
   "description": "An example block to display a string from post meta.",
   "attributes": {
-    "menu": {
+    "label": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "rel": {
       "type": "string"
     },
     "id": {
