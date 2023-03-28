@@ -1,4 +1,20 @@
-.wp-block-navigation__submenu-container.wp-block-lsx-lsx-mega-menu {
+
+/**
+ * ALIGNMENT
+ */
+
+.wp-block-lsx-lsx-mega-menu .wp-block-navigation__submenu-container {
 	min-width: 600px !important;
+}
+
+.wp-block-lsx-lsx-mega-menu .wp-block-navigation__submenu-container:not(.has-alignment-left,.has-alignment-right),
+.wp-block-lsx-lsx-mega-menu .wp-block-navigation__submenu-container.has-alignment-left {
+}
+
+.wp-block-lsx-lsx-mega-menu .wp-block-navigation__submenu-container.has-alignment-right {
+    right: -250px !important;
+}
+
+.wp-block-lsx-lsx-mega-menu .wp-block-navigation__submenu-container.has-alignment-center {
     left: -250px !important;
 }
