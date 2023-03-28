@@ -12,7 +12,7 @@ import { useSelect, useDispatch } from '@wordpress/data';
 import { PanelBody, TextControl, TextareaControl, ToolbarButton, ToolbarGroup } from '@wordpress/components';
 import { displayShortcut, isKeyboardEvent } from '@wordpress/keycodes';
 import { __ } from '@wordpress/i18n';
-import { BlockControls, InnerBlocks, useInnerBlocksProps, InspectorControls, RichText, useBlockProps, store as blockEditorStore, getColorClassName } from '@wordpress/block-editor';
+import { AlignmentControl, BlockControls, InnerBlocks, useInnerBlocksProps, InspectorControls, RichText, useBlockProps, store as blockEditorStore, getColorClassName } from '@wordpress/block-editor';
 import { isURL, prependHTTP } from '@wordpress/url';
 import { useState, useEffect, useRef } from '@wordpress/element';
 import { placeCaretAtHorizontalEdge } from '@wordpress/dom';
@@ -121,7 +121,8 @@ export default function NavigationSubmenuEdit(_ref) {
     url,
     description,
     rel,
-    title
+    title,
+	align
   } = attributes;
   const {
     showSubmenuIcon,
@@ -283,7 +284,8 @@ export default function NavigationSubmenuEdit(_ref) {
       [getColorClassName('color', textColor)]: !!textColor,
       'has-background': !!backgroundColor || customBackgroundColor,
       [getColorClassName('background-color', backgroundColor)]: !!backgroundColor,
-      'open-on-click': openSubmenusOnClick
+      'open-on-click': openSubmenusOnClick,
+	  [`has-text-align-${align}`]: align
     }),
     style: {
       color: !textColor && customTextColor,
@@ -338,6 +340,11 @@ export default function NavigationSubmenuEdit(_ref) {
     onClick: transformToLink,
     className: "wp-block-navigation__submenu__revert",
     isDisabled: !canConvertToLink
+  }),createElement(AlignmentControl, {
+    value: align,
+    onChange: newAlign => setAttributes({
+      align: newAlign
+    })
   }))), createElement(InspectorControls, null, createElement(PanelBody, {
     title: __('Link settings')
   }, createElement(TextControl, {

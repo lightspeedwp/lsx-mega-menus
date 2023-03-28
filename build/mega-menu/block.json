@@ -41,6 +41,9 @@
     },
     "isTopLevelItem": {
       "type": "boolean"
+    },
+    "align": {
+      "type": "string"
     }
   },
   "usesContext": [
