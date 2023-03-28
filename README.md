@@ -40,3 +40,6 @@ If you're a developer who's spotted a bug issue and have a fix, or simply have f
 
 ## Like what you see?
 <a href="https://www.lsdev.biz/contact/"><img src="https://www.lsdev.biz/wp-content/uploads/2020/02/work-with-lightspeed.png" width="850" alt="Work with us at LightSpeed"></a>
+
+## Issues on WP Github
+(Add a way to filter CSS classes for blocks using PHP)[https://github.com/WordPress/gutenberg/issues/23223]

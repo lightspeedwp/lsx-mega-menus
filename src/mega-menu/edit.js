@@ -285,7 +285,7 @@ export default function NavigationSubmenuEdit(_ref) {
       'has-background': !!backgroundColor || customBackgroundColor,
       [getColorClassName('background-color', backgroundColor)]: !!backgroundColor,
       'open-on-click': openSubmenusOnClick,
-	  [`has-text-align-${align}`]: align
+	  [`has-alignment-${align}`]: align
     }),
     style: {
       color: !textColor && customTextColor,

@@ -8,6 +8,11 @@ namespace LSX\MegaMenus;
  */
 class Core {
 
+	/**
+	 * Holds the LI CSS class we raplce our attributes with
+	 */
+	var $mega_menu_selectors = 'wp-block-lsx-lsx-mega-menu';
+
     /**
      * Constructor.
      */
@@ -18,6 +23,8 @@ class Core {
 		add_action( 'enqueue_block_editor_assets', array( $this, 'register_blocks' ) );
 		add_action( 'init', array( $this, 'register_block_type' ), 20 );
 		add_action( 'after_setup_theme', array( $this, 'enqueue_block_styles' ), 10 );
+
+		add_filter( 'render_block', array( $this, 'render_mega_menu_block' ), 10, 3 );
 	}
 
 	/**
@@ -49,9 +56,29 @@ class Core {
 		register_block_type(
 			LSX_MEGAMENU_PATH . 'src/menu-item/',
 			array(
-				'render_callback' => array( $this, 'render_mega_menu_block_new' ),
+				'render_callback' => array( $this, 'render_mega_menu_item_block' ),
 			)
 		);
+	}
+
+	/**
+	 * A function to detect variation, and alter the query args.
+	 * 
+	 * Following the https://developer.wordpress.org/news/2022/12/building-a-book-review-grid-with-a-query-loop-block-variation/
+	 *
+	 * @param string|null   $pre_render   The pre-rendered content. Default null.
+	 * @param array         $parsed_block The block being rendered.
+	 * @param WP_Block|null $parent_block If this is a nested block, a reference to the parent block.
+	 */
+	public function render_mega_menu_block( $block_content, $parsed_block, $block_obj ) {
+		// Determine if this is the custom block variation.
+		if ( isset( $parsed_block['blockName'] ) && 'lsx/lsx-mega-menu' === $parsed_block['blockName'] ) {
+			$attributes = $block_obj->__get( 'attributes' );
+			if ( isset( $attributes['align'] ) ) {
+				$block_content = str_replace( $this->mega_menu_selectors, $this->mega_menu_selectors . ' has-alignment-' . $attributes['align'], $block_content );
+			}
+		}
+		return $block_content;
 	}
 
 	/**
@@ -63,7 +90,7 @@ class Core {
 	 *
 	 * @return string Returns the post content with the legacy widget added.
 	 */
-	public function render_mega_menu_block_new( $attributes, $content, $block ) {
+	public function render_mega_menu_item_block( $attributes, $content, $block ) {
 
 		// Don't render the block's subtree if it has no label.
 		if ( empty( $attributes['menu'] ) ) {
