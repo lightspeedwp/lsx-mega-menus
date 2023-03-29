@@ -24,6 +24,7 @@ import { useMergeRefs, usePrevious } from '@wordpress/compose';
 
 // Custom Alignment Controls
 import { AlignmentControl } from '../components/alignment-control';
+import { WidthControl } from '../components/width-control';
 /**
  * Internal dependencies
  */
@@ -289,7 +290,8 @@ export default function NavigationSubmenuEdit(_ref) {
       'has-background': !!backgroundColor || customBackgroundColor,
       [getColorClassName('background-color', backgroundColor)]: !!backgroundColor,
       'open-on-click': openSubmenusOnClick,
-	  [`has-alignment-${align}`]: align
+	  [`has-alignment-${align}`]: align,
+	  [`has-width-${width}`]: width
     }),
     style: {
       color: !textColor && customTextColor,
@@ -326,6 +328,11 @@ export default function NavigationSubmenuEdit(_ref) {
     value: align,
     onChange: newAlign => setAttributes({
       align: newAlign
+    })
+  }),createElement(WidthControl, {
+    value: width,
+    onChange: newWidth => setAttributes({
+      width: newWidth
     })
   }))), createElement(InspectorControls, null, createElement(PanelBody, {
     title: __('Link settings')

@@ -43,6 +43,9 @@
 		},
 		"align": {
 			"type": "string"
+		},
+		"width": {
+			"type": "string"
 		}
 	},
 	"usesContext": [ "inserter", "textColor", "customTextColor", "backgroundColor", "customBackgroundColor", "overlayTextColor", "customOverlayTextColor", "overlayBackgroundColor", "customOverlayBackgroundColor", "fontSize", "customFontSize", "showSubmenuIcon", "maxNestingLevel", "openSubmenusOnClick", "style" ],
