@@ -3,9 +3,9 @@
   "apiVersion": 2,
   "name": "lsx/lsx-mega-menu-item",
   "version": "1.0.0",
-  "title": "LSX Mega Menu",
+  "title": "LSX Mega Menu Item",
   "category": "design",
-  "icon": "submenu",
+  "icon": "welcome-widgets-menus",
   "parent": [
     "lsx/lsx-mega-menu"
   ],

@@ -48,8 +48,7 @@
 	"usesContext": [ "inserter", "textColor", "customTextColor", "backgroundColor", "customBackgroundColor", "overlayTextColor", "customOverlayTextColor", "overlayBackgroundColor", "customOverlayBackgroundColor", "fontSize", "customFontSize", "showSubmenuIcon", "maxNestingLevel", "openSubmenusOnClick", "style" ],
 	"supports": {
 		"reusable": false,
-		"html": false,
-		"align": ["wide", "full"]
+		"html": false
 	},
 	"textdomain": "lsx-mega-menu"
 }

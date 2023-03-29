@@ -8,6 +8,6 @@ registerBlockType(
 	metadata.name, {
 		title: metadata.title,
 		edit: Edit,
-		save: Save,
+		save: Save
 	}
 );

@@ -12,7 +12,7 @@ import { useSelect, useDispatch } from '@wordpress/data';
 import { PanelBody, TextControl, TextareaControl, ToolbarButton, ToolbarGroup } from '@wordpress/components';
 import { displayShortcut, isKeyboardEvent } from '@wordpress/keycodes';
 import { __ } from '@wordpress/i18n';
-import { AlignmentControl, BlockControls, InnerBlocks, useInnerBlocksProps, InspectorControls, RichText, useBlockProps, store as blockEditorStore, getColorClassName } from '@wordpress/block-editor';
+import { BlockControls, InnerBlocks, useInnerBlocksProps, InspectorControls, RichText, useBlockProps, store as blockEditorStore, getColorClassName } from '@wordpress/block-editor';
 import { isURL, prependHTTP } from '@wordpress/url';
 import { useState, useEffect, useRef } from '@wordpress/element';
 import { placeCaretAtHorizontalEdge } from '@wordpress/dom';
@@ -21,6 +21,9 @@ import { useResourcePermissions } from '@wordpress/core-data';
 import { speak } from '@wordpress/a11y';
 import { createBlock } from '@wordpress/blocks';
 import { useMergeRefs, usePrevious } from '@wordpress/compose';
+
+// Custom Alignment Controls
+import { AlignmentControl } from '../components/alignment-control';
 /**
  * Internal dependencies
  */
