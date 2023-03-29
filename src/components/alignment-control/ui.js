@@ -6,21 +6,19 @@ import { createElement } from "@wordpress/element";
  */
 import { __, isRTL } from '@wordpress/i18n';
 import { ToolbarDropdownMenu, ToolbarGroup } from '@wordpress/components';
-import { alignRight, alignCenter } from '@wordpress/icons';
-
-import { alignLeft } from '../icons';
+import { justifyRight, justifyCenter, justifyLeft } from '@wordpress/icons';
 
 const DEFAULT_ALIGNMENT_CONTROLS = [{
-  icon: alignLeft,
-  title: __('Align submenu left'),
+  icon: justifyLeft,
+  title: __('Position left'),
   align: 'left'
 }, {
-  icon: alignCenter,
-  title: __('Align submenu center'),
+  icon: justifyCenter,
+  title: __('Position center'),
   align: 'center'
 }, {
-  icon: alignRight,
-  title: __('Align submenu right'),
+  icon: justifyRight,
+  title: __('Position right'),
   align: 'right'
 }];
 const POPOVER_PROPS = {
@@ -33,8 +31,8 @@ function AlignmentUI(_ref) {
     value,
     onChange,
     alignmentControls = DEFAULT_ALIGNMENT_CONTROLS,
-    label = __('Align submenu'),
-    describedBy = __('Change submenu alignment'),
+    label = __('Position Submenu'),
+    describedBy = __('Change submenu position'),
     isCollapsed = true,
     isToolbar
   } = _ref;
@@ -47,7 +45,7 @@ function AlignmentUI(_ref) {
 
   function setIcon() {
     if (activeAlignment) return activeAlignment.icon;
-    return isRTL() ? alignRight : alignLeft;
+    return isRTL() ? justifyRight : justifyLeft;
   }
 
   const UIComponent = isToolbar ? ToolbarGroup : ToolbarDropdownMenu;
