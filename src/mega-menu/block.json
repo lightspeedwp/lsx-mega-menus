@@ -5,7 +5,7 @@
 	"version": "1.0.0",
 	"title": "LSX Mega Menu",
 	"category": "design",
-	"icon": "smiley",
+	"icon": "welcome-widgets-menus",
 	"parent": [ "core/navigation" ],
 	"description": "An example block to display a string from post meta.",
 	"attributes": {
@@ -48,7 +48,8 @@
 	"usesContext": [ "inserter", "textColor", "customTextColor", "backgroundColor", "customBackgroundColor", "overlayTextColor", "customOverlayTextColor", "overlayBackgroundColor", "customOverlayBackgroundColor", "fontSize", "customFontSize", "showSubmenuIcon", "maxNestingLevel", "openSubmenusOnClick", "style" ],
 	"supports": {
 		"reusable": false,
-		"html": false
+		"html": false,
+		"align": ["wide", "full"]
 	},
 	"textdomain": "lsx-mega-menu"
 }
