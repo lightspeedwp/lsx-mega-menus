@@ -41,7 +41,7 @@
 		"isTopLevelItem": {
 			"type": "boolean"
 		},
-		"align": {
+		"position": {
 			"type": "string"
 		},
 		"width": {

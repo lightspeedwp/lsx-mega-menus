@@ -26,7 +26,7 @@ const POPOVER_PROPS = {
   variant: 'toolbar'
 };
 
-function AlignmentUI(_ref) {
+function PositionUI(_ref) {
   let {
     value,
     onChange,
@@ -74,5 +74,5 @@ function AlignmentUI(_ref) {
   }, extraProps));
 }
 
-export default AlignmentUI;
+export default PositionUI;
 //# sourceMappingURL=ui.js.map

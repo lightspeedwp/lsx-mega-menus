@@ -19,11 +19,11 @@ import { placeCaretAtHorizontalEdge } from '@wordpress/dom';
 import { link as linkIcon } from '@wordpress/icons';
 import { useResourcePermissions } from '@wordpress/core-data';
 import { speak } from '@wordpress/a11y';
-import { createBlock } from '@wordpress/blocks';
 import { useMergeRefs, usePrevious } from '@wordpress/compose';
+import { createBlock } from '@wordpress/blocks';
 
-// Custom Alignment Controls
-import { AlignmentControl } from '../components/alignment-control';
+// Custom Controls
+import { PositionControl } from '../components/position-control';
 import { WidthControl } from '../components/width-control';
 /**
  * Internal dependencies
@@ -126,7 +126,7 @@ export default function NavigationSubmenuEdit(_ref) {
     description,
     rel,
     title,
-	align,
+	position,
 	width
   } = attributes;
   const {
@@ -290,7 +290,7 @@ export default function NavigationSubmenuEdit(_ref) {
       'has-background': !!backgroundColor || customBackgroundColor,
       [getColorClassName('background-color', backgroundColor)]: !!backgroundColor,
       'open-on-click': openSubmenusOnClick,
-	  [`has-alignment-${align}`]: align,
+	  [`has-position-${position}`]: position,
 	  [`has-width-${width}`]: width
     }),
     style: {
@@ -324,10 +324,10 @@ export default function NavigationSubmenuEdit(_ref) {
     title: __('Link'),
     shortcut: displayShortcut.primary('k'),
     onClick: () => setIsLinkOpen(true)
-  }),createElement(AlignmentControl, {
-    value: align,
-    onChange: newAlign => setAttributes({
-      align: newAlign
+  }),createElement(PositionControl, {
+    value: position,
+    onChange: newPosition => setAttributes({
+		position: newPosition
     })
   }),createElement(WidthControl, {
     value: width,

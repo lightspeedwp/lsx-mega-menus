@@ -4,16 +4,16 @@ import { createElement } from "@wordpress/element";
 /**
  * Internal dependencies
  */
-import AlignmentUI from './ui';
+import PositionUI from './ui';
 
-const AlignmentControl = props => {
-  return createElement(AlignmentUI, _extends({}, props, {
+const PositionControl = props => {
+  return createElement(PositionUI, _extends({}, props, {
     isToolbar: false
   }));
 };
 
-const AlignmentToolbar = props => {
-  return createElement(AlignmentUI, _extends({}, props, {
+const PositionToolbar = props => {
+  return createElement(PositionUI, _extends({}, props, {
     isToolbar: true
   }));
 };
@@ -22,5 +22,5 @@ const AlignmentToolbar = props => {
  */
 
 
-export { AlignmentControl, AlignmentToolbar };
+export { PositionControl, PositionToolbar };
 //# sourceMappingURL=index.js.map

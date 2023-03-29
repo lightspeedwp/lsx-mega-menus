@@ -74,8 +74,12 @@ class Core {
 		// Determine if this is the custom block variation.
 		if ( isset( $parsed_block['blockName'] ) && 'lsx/lsx-mega-menu' === $parsed_block['blockName'] ) {
 			$attributes = $block_obj->__get( 'attributes' );
-			if ( isset( $attributes['align'] ) ) {
-				$block_content = str_replace( $this->mega_menu_selectors, $this->mega_menu_selectors . ' has-alignment-' . $attributes['align'], $block_content );
+			if ( isset( $attributes['position'] ) ) {
+				$block_content = str_replace( $this->mega_menu_selectors, $this->mega_menu_selectors . ' has-position-' . $attributes['position'], $block_content );
+			}
+
+			if ( isset( $attributes['width'] ) ) {
+				$block_content = str_replace( $this->mega_menu_selectors, $this->mega_menu_selectors . ' has-width-' . $attributes['width'], $block_content );
 			}
 		}
 		return $block_content;
