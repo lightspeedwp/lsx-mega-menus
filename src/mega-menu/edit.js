@@ -16,7 +16,7 @@ import { AlignmentControl, BlockControls, InnerBlocks, useInnerBlocksProps, Insp
 import { isURL, prependHTTP } from '@wordpress/url';
 import { useState, useEffect, useRef } from '@wordpress/element';
 import { placeCaretAtHorizontalEdge } from '@wordpress/dom';
-import { link as linkIcon, removeSubmenu } from '@wordpress/icons';
+import { link as linkIcon } from '@wordpress/icons';
 import { useResourcePermissions } from '@wordpress/core-data';
 import { speak } from '@wordpress/a11y';
 import { createBlock } from '@wordpress/blocks';
@@ -122,7 +122,8 @@ export default function NavigationSubmenuEdit(_ref) {
     description,
     rel,
     title,
-	align
+	align,
+	width
   } = attributes;
   const {
     showSubmenuIcon,
@@ -311,35 +312,13 @@ export default function NavigationSubmenuEdit(_ref) {
   });
   const ParentElement = openSubmenusOnClick ? 'button' : 'a';
 
-  function transformToLink() {
-    const newLinkBlock = createBlock('core/navigation-link', attributes);
-    replaceBlock(clientId, newLinkBlock);
-  }
 
-  useEffect(() => {
-    // If block becomes empty, transform to Navigation Link.
-    if (!hasChildren && prevHasChildren) {
-      // This side-effect should not create an undo level as those should
-      // only be created via user interactions.
-      __unstableMarkNextChangeAsNotPersistent();
-
-      transformToLink();
-    }
-  }, [hasChildren, prevHasChildren]);
-  const canConvertToLink = !selectedBlockHasChildren || onlyDescendantIsEmptyLink;
   return createElement(Fragment, null, createElement(BlockControls, null, createElement(ToolbarGroup, null, !openSubmenusOnClick && createElement(ToolbarButton, {
     name: "link",
     icon: linkIcon,
     title: __('Link'),
     shortcut: displayShortcut.primary('k'),
     onClick: () => setIsLinkOpen(true)
-  }), createElement(ToolbarButton, {
-    name: "revert",
-    icon: removeSubmenu,
-    title: __('Convert to Link'),
-    onClick: transformToLink,
-    className: "wp-block-navigation__submenu__revert",
-    isDisabled: !canConvertToLink
   }),createElement(AlignmentControl, {
     value: align,
     onChange: newAlign => setAttributes({
