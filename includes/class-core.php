@@ -22,7 +22,7 @@ class Core {
 	public function init() {
 		add_action( 'enqueue_block_editor_assets', array( $this, 'register_blocks' ) );
 		add_action( 'init', array( $this, 'register_block_type' ), 20 );
-		add_action( 'after_setup_theme', array( $this, 'enqueue_block_styles' ), 10 );
+		add_action( 'after_setup_theme', array( $this, 'enqueue_block_scripts' ), 10 );
 
 		add_filter( 'render_block', array( $this, 'render_mega_menu_block' ), 10, 3 );
 	}
@@ -46,10 +46,14 @@ class Core {
 	 * @return void
 	 */
 	function register_block_type() {
+
+		wp_register_script( 'lsx-mega-menu-scripts',  LSX_MEGAMENU_URL . '/assets/lsx-mega-menu.js', array( 'jquery' ) );
+
 		register_block_type(
 			LSX_MEGAMENU_PATH . 'src/mega-menu/',
 			array(
 				'render_callback' => 'render_block_core_navigation_submenu',
+				'script_handles' => array( 'lsx-mega-menu-scripts' ),
 			)
 		);
 
@@ -136,7 +140,7 @@ class Core {
 	 *
 	 * @return void
 	 */
-	public function enqueue_block_styles() {
+	public function enqueue_block_scripts() {
 		wp_enqueue_block_style(
 			'lsx/lsx-mega-menu',
 			array(

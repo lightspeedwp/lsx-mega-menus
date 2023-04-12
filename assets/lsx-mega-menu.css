@@ -21,16 +21,11 @@
 }
 
 /**
- * WIDTH
+ * Full Width
  */
-body .wp-block-lsx-lsx-mega-menu.has-child:not(.open-on-click):hover>.wp-block-navigation__submenu-container.has-width-full {
-    width: 100vw;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-	top: 100%;
-	height: auto;
-    position: absolute;
-    display: block;
+body .wp-block-lsx-lsx-mega-menu.has-child:hover>.wp-block-navigation__submenu-container.has-width-full {
+	position: fixed;
+    left: 0;
+    top: 80px;
+    width: 100%;
 }
