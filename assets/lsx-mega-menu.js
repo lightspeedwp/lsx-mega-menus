@@ -22,9 +22,18 @@ var lsxMegaMenu = Object.create(null);
 				headerHeight = headerHeight + jQuery('#wpadminbar').height();
 			}
 
+			//check parent padding.
+			let paddingCheck = 0;
+
 			header.find( menuSelector ).each(function(){
-				jQuery(this).css('top',headerHeight);
-				console.log(headerHeight);
+				let adjustHeight = 0;
+				if ( 0 === paddingCheck ) {
+					let anchorBottom = jQuery(this).parent().offset().top + jQuery(this).parent().height();
+					console.log( headerHeight - anchorBottom );
+					adjustHeight = headerHeight - anchorBottom;
+				}
+				
+				jQuery(this).css('top', ( headerHeight - adjustHeight ) );
 			});
 		}
 	};
