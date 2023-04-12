@@ -29,3 +29,16 @@ body .wp-block-lsx-lsx-mega-menu.has-child:hover>.wp-block-navigation__submenu-c
     top: 80px;
     width: 100%;
 }
+
+body .wp-block-navigation-item.wp-block-lsx-lsx-mega-menu.has-width-full.has-position-right-item {
+	justify-content: right;
+}
+
+body .wp-block-navigation-item.wp-block-lsx-lsx-mega-menu.has-width-full,
+body .wp-block-navigation-item.wp-block-lsx-lsx-mega-menu.has-width-full.has-position-center-item {
+	justify-content: center;
+}
+
+body .wp-block-navigation-item.wp-block-lsx-lsx-mega-menu.has-width-full.has-position-left-item {
+	justify-content: left;
+}

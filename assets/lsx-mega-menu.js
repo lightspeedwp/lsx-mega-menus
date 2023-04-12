@@ -35,7 +35,7 @@ var lsxMegaMenu = Object.create(null);
 	 * @package    lsx
 	 * @subpackage scripts
 	 */
-	$(window).on('ready', function () {
+	$(document).on('ready', function () {
 		lsxMegaMenu.parseHeaderHeight();
 	});
 })(jQuery, window, document);
