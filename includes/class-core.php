@@ -23,9 +23,7 @@ class Core {
 		add_action( 'enqueue_block_editor_assets', array( $this, 'register_blocks' ) );
 		add_action( 'init', array( $this, 'register_block_type' ), 20 );
 		add_action( 'after_setup_theme', array( $this, 'enqueue_block_scripts' ), 10 );
-
 		add_filter( 'render_block', array( $this, 'render_mega_menu_block' ), 10, 3 );
-		add_filter( 'render_block', array( $this, 'check_for_login_options' ), 10, 3 );
 	}
 
 	/**
@@ -150,45 +148,5 @@ class Core {
 				'path'   => LSX_MEGAMENU_PATH . '/assets/lsx-mega-menu.css',
 			),
 		);
-	}
-
-	/**
-	 * A function to detect variation, and alter the query args.
-	 * 
-	 * Following the https://developer.wordpress.org/news/2022/12/building-a-book-review-grid-with-a-query-loop-block-variation/
-	 *
-	 * @param string|null   $pre_render   The pre-rendered content. Default null.
-	 * @param array         $parsed_block The block being rendered.
-	 * @param WP_Block|null $parent_block If this is a nested block, a reference to the parent block.
-	 */
-	public function check_for_login_options( $block_content, $parsed_block, $block_obj ) {
-		// Determine if this is the custom block variation.
-		if ( ! isset( $parsed_block['blockName'] ) || ! isset( $parsed_block['attrs'] )  ) {
-			return $block_content;
-		}
-		$allowed_blocks = array(
-			'lsx/lsx-mega-menu',
-			'core/navigation-link',
-			'core/navigation-submenu'
-		);
-		if ( ! in_array( $parsed_block['blockName'], $allowed_blocks, true ) ) {
-			return $block_content; 
-		}
-		if ( ! isset( $parsed_block['attrs']['className'] ) ) {
-			return $block_content;
-		}
-		if ( '' === $parsed_block['attrs']['className'] || false === $parsed_block['attrs']['className'] ) {
-			return $block_content;
-		}
-
-		//finally see if we have one of our classe in the string.
-		if ( is_user_logged_in() && false !== stripos( 'hide-logged-in', $parsed_block['attrs']['className'] ) ) {
-			$block_content = '';
-		}
-
-		if ( ! is_user_logged_in() && false !== stripos( 'hide-logged-out', $parsed_block['attrs']['className'] ) ) {
-			$block_content = '';
-		}
-		return $block_content;
 	}
 }
