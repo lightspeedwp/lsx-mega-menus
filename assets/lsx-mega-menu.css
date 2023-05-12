@@ -55,15 +55,3 @@ body .wp-block-navigation-item.wp-block-lsx-lsx-mega-menu.has-width-full.has-pos
 body .wp-block-navigation-item.wp-block-lsx-lsx-mega-menu.has-width-full.has-position-left-item {
 	justify-content: left;
 }
-
-/**
- * Visual options
- */
- .wp-block-lsx-lsx-mega-menu.hide-logged-in,
- .wp-block-navigation-item.hide-logged-in {
-
- }
-.wp-block-lsx-lsx-mega-menu.hide-logged-out,
-.wp-block-navigation-item.hide-logged-out {
-	display:none;
-}
