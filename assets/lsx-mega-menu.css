@@ -16,7 +16,7 @@
  * POSITION
  */
 
-body .wp-block-lsx-lsx-mega-menu .wp-block-navigation__submenu-container {
+body:not(wp-admin) .wp-block-lsx-lsx-mega-menu .wp-block-navigation__submenu-container {
 	min-width: 600px !important;
 }
 
