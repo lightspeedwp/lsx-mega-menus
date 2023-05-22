@@ -9,11 +9,7 @@
     <a href="https://lsx.lsdev.biz/"><img src="https://lsx.lsdev.biz/wp-content/uploads/2019/06/Designed-for-LSX-Theme-blue.png" alt="Made for LSX"></a>
 </p>
 
-[LSX Sharing Extension](https://lsx.lsdev.biz/extensions/sharing/) adds buttons to your posts & pages that your readers can use to share your content on Facebook, Twitter and Pinterest.
-
-## Shortcodes
-
-`[lsx_title_link url="https://lsdev.biz" title="LightSpeed" id=""]`
+The [LSX Mega Menus](https://lsx.lsdev.biz/extensions/mega-menus/) extension creates custom, full-width dropdown menus that contain images, widgets and more that seamlessly tie into your LSX WordPress site.
 
 ## Works with the LSX Theme
 Our modern and lightweight [theme](https://lsx.lsdev.biz/) works perfectly with LSX Mega Menus, improving internal linking, website SEO and user experience! 
@@ -33,6 +29,25 @@ We have created extensive documentation on all of the LSX Mega Menus Plugin func
 We offer premium support for this plugin. Premium support that can be purchased [via our website](https://www.lsdev.biz/services/support/).
 
 If you are experiencing issues with the LSX Mega Menus Plugin & have experience with Github, please log any bug issues you are having on the [LSX Mega Menus Github Issues](https://github.com/lightspeeddevelopment/lsx-mega-menus/issues/) page.
+
+## How to use
+
+### Create your menu template parts
+Before you add your menu, you need to create your mega menu panels.
+
+1. Go to the site editor.
+2. Select the `Template Parts` option.
+3. Create a new template part, selecting the `General` option.
+4. The new template part must have the term `Mega Menu` in the name, in order to be selectable in the nav menu.
+5. Now add columns, links, images etc to the template part.
+6. Save when complete.
+
+### Add your menu to the navigation
+1. Edit your `core/navigation` block, and add a `navigation link` to it.
+2. Click on the `navigation link` and select the transform button from the toolbar.
+3. Select the `LSX Mega Menu` option from the drop down.
+4. Add in your `Link` information to link pop up that shows.
+5. Lastly, select the mega menu you want from the dropdown embedded in the new block.
 
 ## Contributing to the LSX Mega Menus Plugin
 
