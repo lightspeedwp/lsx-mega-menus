@@ -15,9 +15,10 @@
 /**
  * POSITION
  */
-
-body:not(wp-admin) .wp-block-lsx-lsx-mega-menu .wp-block-navigation__submenu-container {
-	min-width: 600px !important;
+@media screen and (min-width:600px) {
+	body:not(wp-admin) .wp-block-lsx-lsx-mega-menu .wp-block-navigation__submenu-container {
+		min-width: 600px !important;
+	}
 }
 
 body .wp-block-lsx-lsx-mega-menu .wp-block-navigation__submenu-container:not(.has-position-left,.has-position-right),
@@ -50,7 +51,7 @@ body .wp-block-lsx-lsx-mega-menu .wp-block-navigation__submenu-container.has-pos
 
 @media screen and (max-width:599px) {
 	body .wp-block-lsx-lsx-mega-menu.has-child>.wp-block-navigation__submenu-container.has-width-full {
-		display: none;
+		
 	}
 }
 
