@@ -24,6 +24,7 @@ class Core {
 		add_action( 'init', array( $this, 'register_block_type' ), 20 );
 		add_action( 'after_setup_theme', array( $this, 'enqueue_block_scripts' ), 10 );
 		add_filter( 'render_block', array( $this, 'render_mega_menu_block' ), 10, 3 );
+		add_filter( 'script_loader_tag', array( $this, 'cf_async_disable' ), 10, 3 );
 	}
 
 	/**
@@ -148,5 +149,20 @@ class Core {
 				'path'   => LSX_MEGAMENU_PATH . '/assets/lsx-mega-menu.css',
 			),
 		);
+	}
+
+	/**
+	 * Make comment reply button work with CloudFlare Rocket Loader
+	 *
+	 * @param string $tag The current tag being used.
+	 * @param string $handle The current handle outputting.
+	 * @param string $src The current image src.
+	 * @return string
+	 */
+	public function cf_async_disable( $tag, $handle, $src ) {
+		if ( 'lsx-mega-menu-scripts' !== $handle ) {
+			return $tag;
+		}
+		return str_replace( ' src', ' data-cfasync="false" src', $tag );
 	}
 }
