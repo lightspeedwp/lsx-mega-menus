@@ -9,7 +9,7 @@ Stable tag: 2.0.0
 License: GPLv3
 Licence URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
-Go from mundane to mega with the [LSX Mega Menus Extension](https://lsdev.biz/lsx/extensions/mega-menus/) extension. Create beautiful full-width menu dropdowns that contain dynamic content such as images, icons, videos, and widget areas.It has a familiar drag and drop interface, and menu items that can easily be resized and reordered.
+Go from mundane to mega with the [LSX Mega Menus Extension](https://lsx.design/products/lsx-mega-menus/) extension. Create beautiful full-width menu dropdowns that contain dynamic content such as images, icons, videos, and widget areas.It has a familiar drag and drop interface, and menu items that can easily be resized and reordered.
 
 ## Works with the LSX Design Theme
 Our modern and lightweight [theme](https://wordpress.org/themes/lsx-design/) works perfectly with LSX Mega Menus, improving internal linking, website SEO and user experience! LSX Mega Menus is capable of working with any theme using the site editor.
