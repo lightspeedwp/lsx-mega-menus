@@ -160,7 +160,7 @@ class Core {
 	 * @return string
 	 */
 	public function cf_async_disable( $tag, $handle, $src ) {
-		if ( 'lsx-mega-menu-scripts' !== $handle ) {
+		if ( 'lsx-mega-menu-scripts' !== $handle && 'jquery' !== $handle ) {
 			return $tag;
 		}
 		return str_replace( ' src', ' data-cfasync="false" src', $tag );

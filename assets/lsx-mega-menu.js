@@ -10,19 +10,23 @@ var lsxMegaMenu = Object.create(null);
 	 * @subpackage scripts
 	 */
 	lsxMegaMenu.parseHeaderHeight = function() {
-		let header       = jQuery('header');
+		let header       = jQuery('nav');
 		let menuSelector = '.wp-block-lsx-lsx-mega-menu.wp-block-navigation__submenu-container.has-width-full';
 
-		if ( 0 < header.length && 0 < header.find( menuSelector ).length ) {
-			//check parent padding.
-			let paddingCheck = 0;
-
-			header.find( menuSelector ).each(function(){
-				let anchorBottom = 0;
-				if ( 0 === paddingCheck ) {
-					anchorBottom = jQuery(this).parent().offset().top + jQuery(this).parent().height();
+		if ( 0 < header.length ) {
+			header.each(function(){
+				if ( 0 < jQuery(this).length && 0 < jQuery(this).find( menuSelector ).length ) {
+					//check parent padding.
+					let paddingCheck = 0;
+		
+					jQuery(this).find( menuSelector ).each(function(){
+						let anchorBottom = 0;
+						if ( 0 === paddingCheck ) {
+							anchorBottom = jQuery(this).parent().offset().top + jQuery(this).parent().height();
+						}
+						jQuery(this).css('top', anchorBottom );
+					});
 				}
-				jQuery(this).css('top', anchorBottom );
 			});
 		}
 	};
