@@ -1,0 +1,49 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "lsx/lsx-mega-menu-item",
+  "version": "1.0.0",
+  "title": "LSX Mega Menu Item",
+  "category": "design",
+  "icon": "welcome-widgets-menus",
+  "parent": [
+    "lsx/lsx-mega-menu"
+  ],
+  "textdomain": "lsx-mega-menu",
+  "attributes": {
+    "menu": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "rel": {
+      "type": "string"
+    },
+    "id": {
+      "type": "number"
+    },
+    "opensInNewTab": {
+      "type": "boolean",
+      "default": false
+    },
+    "url": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "kind": {
+      "type": "string"
+    },
+    "isTopLevelLink": {
+      "type": "boolean"
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "lsx/lsx-mega-menu",
+  "version": "1.0.0",
+  "title": "LSX Mega Menu",
+  "category": "design",
+  "icon": "welcome-widgets-menus",
+  "parent": [
+    "core/navigation"
+  ],
+  "description": "An example block to display a string from post meta.",
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "rel": {
+      "type": "string"
+    },
+    "id": {
+      "type": "number"
+    },
+    "opensInNewTab": {
+      "type": "boolean",
+      "default": false
+    },
+    "url": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "kind": {
+      "type": "string"
+    },
+    "isTopLevelItem": {
+      "type": "boolean"
+    },
+    "position": {
+      "type": "string"
+    },
+    "width": {
+      "type": "string"
+    }
+  },
+  "usesContext": [
+    "inserter",
+    "textColor",
+    "customTextColor",
+    "backgroundColor",
+    "customBackgroundColor",
+    "overlayTextColor",
+    "customOverlayTextColor",
+    "overlayBackgroundColor",
+    "customOverlayBackgroundColor",
+    "fontSize",
+    "customFontSize",
+    "showSubmenuIcon",
+    "maxNestingLevel",
+    "openSubmenusOnClick",
+    "style"
+  ],
+  "supports": {
+    "reusable": false,
+    "html": false
+  },
+  "textdomain": "lsx-mega-menu"
+}
