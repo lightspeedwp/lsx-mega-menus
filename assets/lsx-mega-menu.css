@@ -16,7 +16,7 @@
  * POSITION
  */
 @media screen and (min-width:600px) {
-	body:not(.wp-admin) .wp-block-lsx-lsx-mega-menu .wp-block-navigation__submenu-container {
+	body .wp-block-lsx-lsx-mega-menu ul.wp-block-navigation__submenu-container {
 		min-width: 600px !important;
 	}
 }
@@ -34,11 +34,14 @@ body .wp-block-lsx-lsx-mega-menu .wp-block-navigation__submenu-container.has-pos
     left: -250px !important;
 }
 
+
+.wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container.wp-block-lsx-lsx-mega-menu {
+    background-color: transparent;
+}
+
 /**
  * Full Width
  */
-
- 
 
 @media screen and (min-width:600px) {
 	body .wp-block-lsx-lsx-mega-menu.has-child:hover>.wp-block-navigation__submenu-container.has-width-full {
