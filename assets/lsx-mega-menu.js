@@ -17,23 +17,18 @@ var lsxMegaMenu = Object.create(null);
 
 		if ( 0 < header.length && 0 < header.find( menuSelector ).length ) {
 
-			let headerHeight = header.height();
-			if ( jQuery('body').hasClass('admin-bar') ) {
-				headerHeight = headerHeight + jQuery('#wpadminbar').height();
-			}
-
 			//check parent padding.
 			let paddingCheck = 0;
 
 			header.find( menuSelector ).each(function(){
 				let adjustHeight = 0;
+				let anchorBottom = 0;
 				if ( 0 === paddingCheck ) {
-					let anchorBottom = jQuery(this).parent().offset().top + jQuery(this).parent().height();
-					console.log( headerHeight - anchorBottom );
-					adjustHeight = headerHeight - anchorBottom;
+					console.log(jQuery(this).parent().offset().top);
+					console.log(jQuery(this).parent().height());
+					anchorBottom = jQuery(this).parent().offset().top + jQuery(this).parent().height();
 				}
-				
-				jQuery(this).css('top', ( headerHeight - adjustHeight ) );
+				jQuery(this).css('top', anchorBottom );
 			});
 		}
 	};
@@ -44,7 +39,7 @@ var lsxMegaMenu = Object.create(null);
 	 * @package    lsx
 	 * @subpackage scripts
 	 */
-	$(document).on('ready', function () {
+	$(window).on( 'load', function () {
 		lsxMegaMenu.parseHeaderHeight();
-	});
+	});	
 })(jQuery, window, document);
