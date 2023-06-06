@@ -50,9 +50,10 @@ If you're a developer who's spotted a bug issue and have a fix, or simply have f
 
 == Screenshots ==
 
-1. Website Showcase
-2. Customizer View
-3. Widget View
+1. Block Inserter
+2. LSX Mega Menu Block with Submenu Block
+3. LSX Mega Menu Block settings
+4. Example Menu
 
 == Changelog ==
 
