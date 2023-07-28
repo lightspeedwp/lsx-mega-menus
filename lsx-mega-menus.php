@@ -2,7 +2,7 @@
 /*
  * Plugin Name: LSX Mega Menus
  * Plugin URI:  https://www.lsdev.biz/product/lsx-mega-menus/
- * Description: The LSX Mega Menus extension creates custom, full-width dropdown menus that contain images, widgets and more that seamlessly tie into your LSX WordPress site.
+ * Description: Build mega menus using blocks, comes with existing template parts to help users getting started within the site editor.
  * Version:     2.0.0
  * Author:      LightSpeed
  * Author URI:  https://www.lsdev.biz/
