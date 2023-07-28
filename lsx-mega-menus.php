@@ -2,7 +2,7 @@
 /*
  * Plugin Name: LSX Mega Menus
  * Plugin URI:  https://www.lsdev.biz/product/lsx-mega-menus/
- * Description: Build mega menus using blocks, comes with existing template parts to help users getting started within the site editor.
+ * Description: Build mega menus using blocks, comes with existing template parts to help users get started within the site editor.
  * Version:     2.0.0
  * Author:      LightSpeed
  * Author URI:  https://www.lsdev.biz/
