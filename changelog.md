@@ -1,5 +1,10 @@
 # Change log
 
+## [[2.0.1]](https://github.com/lightspeeddevelopment/lsx-mega-menus/releases/tag/2.0.1) - 2023-08-09
+
+### Security
+- General testing to ensure compatibility with latest WordPress version (6.3).
+
 ## [[2.0.0]](https://github.com/lightspeeddevelopment/lsx-mega-menus/releases/tag/2.0.0) - 2023-06-05
 - The LSX Mega Menu has been updated to work with the site editor and the core navigation block.
 
