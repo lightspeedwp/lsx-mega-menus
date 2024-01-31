@@ -3,7 +3,7 @@
  * Plugin Name: LSX Mega Menus
  * Plugin URI:  https://www.lsdev.biz/product/lsx-mega-menus/
  * Description: Build mega menus using blocks, comes with existing template parts to help users get started within the site editor.
- * Version:     2.0.1
+ * Version:     2.0.2
  * Author:      LightSpeed
  * Author URI:  https://www.lsdev.biz/
  * License:     GPL3
@@ -20,7 +20,7 @@ if ( ! defined( 'WPINC' ) ) {
 define('LSX_MEGAMENU_PATH', plugin_dir_path(__FILE__));
 define('LSX_MEGAMENU_CORE', __FILE__);
 define('LSX_MEGAMENU_URL', plugin_dir_url(__FILE__));
-define('LSX_MEGAMENU_VER', '2.0.1');
+define('LSX_MEGAMENU_VER', '2.0.2');
 
 require_once LSX_MEGAMENU_PATH . 'includes/class-core.php';
 

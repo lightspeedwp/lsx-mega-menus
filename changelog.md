@@ -1,5 +1,13 @@
 # Change log
 
+## [[2.0.1]](https://github.com/lightspeeddevelopment/lsx-mega-menus/releases/tag/2.0.1) - 2024-01-31
+
+### Fixed
+- A general error with the menu items loading in the editor
+
+### Security
+- General testing to ensure compatibility with latest WordPress version (6.4).
+
 ## [[2.0.1]](https://github.com/lightspeeddevelopment/lsx-mega-menus/releases/tag/2.0.1) - 2023-08-09
 
 ### Security
