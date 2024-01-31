@@ -2,7 +2,7 @@
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 2,
   "name": "lsx/lsx-mega-menu",
-  "version": "1.0.0",
+  "version": "2.0.1",
   "title": "LSX Mega Menu",
   "category": "design",
   "icon": "welcome-widgets-menus",

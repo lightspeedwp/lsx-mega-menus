@@ -246,9 +246,11 @@ export default function NavigationSubmenuEdit(_ref) {
     const {
       ownerDocument
     } = ref.current;
+
     const {
       defaultView
     } = ownerDocument;
+
     const selection = defaultView.getSelection();
     const range = ownerDocument.createRange(); // Get the range of the current ref contents so we can add this range to the selection.
 
@@ -329,14 +331,17 @@ export default function NavigationSubmenuEdit(_ref) {
     onChange: newPosition => setAttributes({
 		position: newPosition
     })
-  }),createElement(WidthControl, {
+  }),
+  createElement(WidthControl, {
     value: width,
     onChange: newWidth => setAttributes({
       width: newWidth
     })
-  }))), createElement(InspectorControls, null, createElement(PanelBody, {
+  }))),
+  createElement(InspectorControls, null, createElement(PanelBody, {
     title: __('Link settings')
-  }, createElement(TextControl, {
+  },
+  createElement(TextControl, {
     __nextHasNoMarginBottom: true,
     value: label || '',
     onChange: labelValue => {
@@ -425,6 +430,7 @@ export default function NavigationSubmenuEdit(_ref) {
     }
   })), (showSubmenuIcon || openSubmenusOnClick) && createElement("span", {
     className: "wp-block-navigation__submenu-icon"
-  }, createElement(ItemSubmenuIcon, null)), createElement("div", innerBlocksProps)));
+  }, createElement(ItemSubmenuIcon, null)), createElement("div", innerBlocksProps))
+  );
 }
 //# sourceMappingURL=edit.js.map
