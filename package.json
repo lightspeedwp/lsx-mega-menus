@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/lightspeeddevelopment/lsx-mega-menus",
   "devDependencies": {
-    "@wordpress/block-library": "^9.6.0",
+    "@wordpress/block-library": "^9.6.1",
     "@wordpress/icons": "^10.6.0",
     "@wordpress/scripts": "^28.6.0",
     "acorn": "^8.12.1",
