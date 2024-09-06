@@ -26,7 +26,7 @@
   "devDependencies": {
     "@wordpress/block-library": "^9.6.1",
     "@wordpress/icons": "^10.6.0",
-    "@wordpress/scripts": "^28.6.0",
+    "@wordpress/scripts": "^29.0.0",
     "acorn": "^8.12.1",
     "postcss": "^8.4.45",
     "postcss-loader": "^8.1.1"
