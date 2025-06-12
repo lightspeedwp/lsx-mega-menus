@@ -28,7 +28,7 @@
     "@wordpress/icons": "^10.24.0",
     "@wordpress/scripts": "^30.18.0",
     "acorn": "^8.15.0",
-    "postcss": "^8.5.4",
+    "postcss": "^8.5.5",
     "postcss-loader": "^8.1.1"
   }
 }
