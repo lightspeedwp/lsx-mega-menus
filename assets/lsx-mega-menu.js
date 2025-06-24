@@ -9,25 +9,12 @@ var lsxMegaMenu = Object.create(null);
 	 * @package    lsx
 	 * @subpackage scripts
 	 */
-	lsxMegaMenu.parseHeaderHeight = function() {
-		let header       = jQuery('nav');
-		let menuSelector = '.wp-block-lsx-lsx-mega-menu.wp-block-navigation__submenu-container.has-width-full';
+	lsxMegaMenu.addCSS = function( css ) {
+		let header = jQuery('head');
 
 		if ( 0 < header.length ) {
-			header.each(function(){
-				if ( 0 < jQuery(this).length && 0 < jQuery(this).find( menuSelector ).length ) {
-					//check parent padding.
-					let paddingCheck = 0;
-		
-					jQuery(this).find( menuSelector ).each(function(){
-						let anchorBottom = 0;
-						if ( 0 === paddingCheck ) {
-							anchorBottom = jQuery(this).parent().offset().top + jQuery(this).parent().height();
-						}
-						jQuery(this).css('top', anchorBottom );
-					});
-				}
-			});
+			let styleTag = '<style >' + css + '</style>';
+			header.append( styleTag );
 		}
 	};
 
@@ -38,6 +25,6 @@ var lsxMegaMenu = Object.create(null);
 	 * @subpackage scripts
 	 */
 	$(window).on( 'load', function () {
-		lsxMegaMenu.parseHeaderHeight();
+		lsxMegaMenu.addCSS();
 	});	
 })(jQuery, window, document);
