@@ -25,6 +25,9 @@ class Core {
 		add_action( 'after_setup_theme', array( $this, 'enqueue_block_scripts' ), 10 );
 		add_filter( 'render_block', array( $this, 'render_mega_menu_block' ), 10, 3 );
 		add_filter( 'script_loader_tag', array( $this, 'cf_async_disable' ), 10, 3 );
+
+		//Register our mega menu template part area.
+		add_filter( 'default_wp_template_part_areas', [ $this, 'register_template_part_category' ] );
 	}
 
 	/**
@@ -168,4 +171,24 @@ class Core {
 		}
 		return str_replace( ' src', ' data-cfasync="false" src', $tag );
 	}
+
+	/**
+	 * Registers the Mega Menu template part.
+	 *
+	 * @param array $parts
+	 * @return array
+	 */
+	public function register_template_part_category( $parts ) {
+		$parts[] = array(
+			'area'        => 'lsx_mega_menu',
+			'label'       => _x( 'Mega Menus', 'template part area', 'lsx-mega-menus' ),
+			'description' => __(
+				'Design an advanced menu panel for your sites navigation.',
+				'lsx-mega-menus'
+			),
+			'icon'        => 'welcome-widgets-menus',
+			'area_tag'    => 'lsx_mega_menu',
+		);
+		return $parts;
+	} 
 }
