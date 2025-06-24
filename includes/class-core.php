@@ -27,7 +27,7 @@ class Core {
 		add_filter( 'script_loader_tag', array( $this, 'cf_async_disable' ), 10, 3 );
 
 		//Register our mega menu template part area.
-		add_filter( 'default_wp_template_part_areas', [ $this, 'register_template_part_category' ] );
+		add_filter( 'default_wp_template_part_areas', [ $this, 'register_template_part_category' ], 9, 1 );
 	}
 
 	/**
