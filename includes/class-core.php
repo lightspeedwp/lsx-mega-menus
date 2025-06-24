@@ -183,7 +183,7 @@ class Core {
 			'area'        => 'lsx_mega_menu',
 			'label'       => _x( 'Mega Menus', 'template part area', 'lsx-mega-menus' ),
 			'description' => __(
-				'Design an advanced menu panel for your sites navigation.',
+				'Design advanced drop down panels for your sites navigation.',
 				'lsx-mega-menus'
 			),
 			'icon'        => 'welcome-widgets-menus',
