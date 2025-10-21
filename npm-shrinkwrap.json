@@ -8,7 +8,7 @@
       "version": "2.0.1",
       "license": "GPL-3.0",
       "devDependencies": {
-        "@wordpress/block-library": "^9.33.0",
+        "@wordpress/block-library": "^9.33.1",
         "@wordpress/icons": "^11.0.0",
         "@wordpress/scripts": "^30.26.0",
         "acorn": "^8.15.0",
@@ -6925,9 +6925,9 @@
       }
     },
     "node_modules/@wordpress/block-library": {
-      "version": "9.33.0",
-      "resolved": "https://registry.npmjs.org/@wordpress/block-library/-/block-library-9.33.0.tgz",
-      "integrity": "sha512-9qusSBP86k787zH1sWKzS+COMuAaZRYVfrbEt9HjEACtPfGFMUf6vLmRdXZbjqTcauU5qkl1/8bXg+xJ7uqW8g==",
+      "version": "9.33.1",
+      "resolved": "https://registry.npmjs.org/@wordpress/block-library/-/block-library-9.33.1.tgz",
+      "integrity": "sha512-SQ5jW0OJwEy4LIL16V5SK39wWgyKt4A8y1Ye070nwcZmamTIvg1wqypITtwqXfJVAX9YUZvicX3Vb3KOZ6nAfQ==",
       "dev": true,
       "license": "GPL-2.0-or-later",
       "dependencies": {
