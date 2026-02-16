@@ -13,7 +13,7 @@
         "@wordpress/scripts": "^31.4.0",
         "acorn": "^8.15.0",
         "postcss": "^8.5.6",
-        "postcss-loader": "^8.2.0"
+        "postcss-loader": "^8.2.1"
       }
     },
     "node_modules/@ampproject/remapping": {
@@ -9008,33 +9008,6 @@
       "license": "BSD-3-Clause",
       "engines": {
         "node": ">=0.3.1"
-      }
-    },
-    "node_modules/@wordpress/theme": {
-      "version": "0.5.0",
-      "resolved": "https://registry.npmjs.org/@wordpress/theme/-/theme-0.5.0.tgz",
-      "integrity": "sha512-6V14snLXUqVs3fBPmGJhWkgtWcrwEe7vUS04nTl7hyI5uyL+N7LXRldWTjnzwaQL0ywBIx4u13gJU/GZqOc8dQ==",
-      "dev": true,
-      "license": "GPL-2.0-or-later",
-      "dependencies": {
-        "@wordpress/element": "^6.38.0",
-        "@wordpress/private-apis": "^1.38.0",
-        "colorjs.io": "^0.6.0",
-        "memize": "^2.1.0"
-      },
-      "engines": {
-        "node": ">=18.12.0",
-        "npm": ">=8.19.2"
-      },
-      "peerDependencies": {
-        "react": "^18.0.0",
-        "react-dom": "^18.0.0",
-        "stylelint": "^16.8.2"
-      },
-      "peerDependenciesMeta": {
-        "stylelint": {
-          "optional": true
-        }
       }
     },
     "node_modules/@wordpress/token-list": {
@@ -20005,9 +19978,9 @@
       }
     },
     "node_modules/postcss-loader": {
-      "version": "8.2.0",
-      "resolved": "https://registry.npmjs.org/postcss-loader/-/postcss-loader-8.2.0.tgz",
-      "integrity": "sha512-tHX+RkpsXVcc7st4dSdDGliI+r4aAQDuv+v3vFYHixb6YgjreG5AG4SEB0kDK8u2s6htqEEpKlkhSBUTvWKYnA==",
+      "version": "8.2.1",
+      "resolved": "https://registry.npmjs.org/postcss-loader/-/postcss-loader-8.2.1.tgz",
+      "integrity": "sha512-k98jtRzthjj3f76MYTs9JTpRqV1RaaMhEU0Lpw9OTmQZQdppg4B30VZ74BojuBHt3F4KyubHJoXCMUeM8Bqeow==",
       "dev": true,
       "license": "MIT",
       "dependencies": {
@@ -20023,7 +19996,7 @@
         "url": "https://opencollective.com/webpack"
       },
       "peerDependencies": {
-        "@rspack/core": "0.x || 1.x",
+        "@rspack/core": "0.x || ^1.0.0 || ^2.0.0-0",
         "postcss": "^7.0.0 || ^8.0.1",
         "webpack": "^5.0.0"
       },
