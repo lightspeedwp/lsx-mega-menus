@@ -12,6 +12,8 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v7
+      with:
+        persist-credentials: false
     - name: Checking PHP syntax error
       uses: overtrue/phplint@9.7.2
       with:
