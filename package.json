@@ -27,7 +27,7 @@
     "@wordpress/block-library": "^11.1.0",
     "@wordpress/icons": "^17.0.0",
     "@wordpress/scripts": "^36.0.0",
-    "postcss": "^8.5.28",
+    "postcss": "^8.5.29",
     "postcss-loader": "^8.2.1"
   }
 }
