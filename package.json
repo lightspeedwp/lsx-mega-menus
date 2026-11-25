@@ -28,6 +28,6 @@
     "@wordpress/icons": "^21.0.0",
     "@wordpress/scripts": "^37.2.0",
     "postcss": "^8.5.33",
-    "postcss-loader": "^8.2.1"
+    "postcss-loader": "^8.2.2"
   }
 }
